@@ -1,5 +1,5 @@
 
-package main;
+package bangunDatar;
 
 public abstract class BangunDatar {
     
