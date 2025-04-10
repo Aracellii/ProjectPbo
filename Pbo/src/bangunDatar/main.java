@@ -1,22 +1,19 @@
 package bangunDatar;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
-
-
-/**
- *
- * @author aracelli
- */
 public class main {
-
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Lingkaran
+        // Polymorphism
+        BangunDatar lingkaran = new Lingkaran(7);
+        // Memanggil Method 
+        lingkaran.hitungLuas();
+        lingkaran.hitungKeliling();
+        
+        // Persegi
+        // Polymorphism
+        BangunDatar persegi = new Persegi(3);
+        // Memanggil Method 
+        persegi.hitungLuas();
+        persegi.hitungKeliling();
     }
-    
 }

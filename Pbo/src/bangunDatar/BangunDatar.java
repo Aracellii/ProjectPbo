@@ -1,11 +1,8 @@
-
 package bangunDatar;
 
-public abstract class BangunDatar {
-    
-    float panjang,lebar;
-    
-    public abstract void luas ();
-    
-    public abstract void keliling ();
+abstract class BangunDatar {
+    protected final static double phi = 3.14;
+
+    public abstract void hitungLuas();
+    public abstract void hitungKeliling();
 }
