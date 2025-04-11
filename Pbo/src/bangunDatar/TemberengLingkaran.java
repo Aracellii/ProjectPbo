@@ -1,23 +1,22 @@
 package bangunDatar;
 
-public class JuringLingkaran extends Lingkaran {
+public class TemberengLingkaran extends Lingkaran {
     private double sudut;
-
-    public JuringLingkaran(double jari, double sudut) {
-        super(jari);
+    
+    public TemberengLingkaran(double sudut) {
         this.sudut = sudut;
-    }
+        super(jari);                                                                     //Mengambil dari lingkaran
 
+    }
     @Override
     public void hitungLuas() {
-        double luas = (sudut / 360) * phi * jari * jari;
-        System.out.println("Luas Juring Lingkaran: " + luas);
+        double luasJuring = (sudut / 360) * super.hitungLuas();
+        double luasSegitiga = 0.5 * jari * jari * Math.sin(Math.toRadians(sudut));
+        return luasJuring - luasSegitiga;
     }
-
     @Override
     public void hitungKeliling() {
-        double busur = (sudut / 360) * 2 * phi * jari;
-        double keliling = busur + 2 * jari;
-        System.out.println("Keliling Juring Lingkaran: " + keliling);
+        double panjangBusur = (sudut / 360) * 2 * Math.PI * jari;
+        return panjangBusur + 2 * jari * Math.sin(Math.toRadians(sudut / 2));
     }
 }
