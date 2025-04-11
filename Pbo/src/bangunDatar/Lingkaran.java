@@ -6,7 +6,7 @@ public class Lingkaran extends BangunDatar {
     public Lingkaran(double jari) {
         this.jari = jari;
     }
-dsad
+
     @Override
     public void hitungLuas() {
         double luas = phi * jari * jari;
