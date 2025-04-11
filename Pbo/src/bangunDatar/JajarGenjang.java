@@ -4,8 +4,10 @@ public class JajarGenjang extends BangunDatar {
     private double alas;
     private double sisiMiring;
     private double tinggi;
-    
-    
+    private double sisiKiri;
+
+
+
     public JajarGenjang(double alas, double sisiMiring, double tinggi) {
         this.alas = alas;
         this.sisiKiri = sisiMiring;

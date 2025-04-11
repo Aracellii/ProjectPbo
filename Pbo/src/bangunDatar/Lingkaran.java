@@ -1,7 +1,7 @@
 package bangunDatar;
 
 public class Lingkaran extends BangunDatar {
-    private double jari;
+    public double jari;
 
     public Lingkaran(double jari) {
         this.jari = jari;
