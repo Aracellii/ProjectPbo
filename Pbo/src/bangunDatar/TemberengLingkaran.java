@@ -1,9 +1,9 @@
 package bangunDatar;
 
-public class JuringLingkaran extends Lingkaran {
+public class TemberengLingkaran extends Lingkaran {
     private double sudut;
 
-    public JuringLingkaran(double jari, double sudut) {
+    public TemberengLingkaran(double jari, double sudut) {
         super(jari);
         this.sudut = sudut;
     }
