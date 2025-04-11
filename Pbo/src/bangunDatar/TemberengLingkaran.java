@@ -2,8 +2,14 @@ package bangunDatar;
 
 public class TemberengLingkaran extends Lingkaran {
     private double sudut;
+<<<<<<< HEAD
     
     public TemberengLingkaran(double sudut) {
+=======
+
+    public TemberengLingkaran(double jari, double sudut) {
+        super(jari);
+>>>>>>> f37271048addecac3bdba68c902b75fbf23371a2
         this.sudut = sudut;
         super(jari);                                                                     //Mengambil dari lingkaran
 
