@@ -1,4 +1,7 @@
-package bangunDatar;
+package main;
+
+import bangunDatar.*;
+
 public class Main {
     public static void main(String[] args) {
         // Polymorphism - Lingkaran
@@ -19,5 +22,14 @@ public class Main {
         BangunDatar segitiga = new Segitiga(3,4,5,6);
         segitiga.hitungLuas();
         segitiga.hitungKeliling();
+
+        System.out.println("");
+
+        // Polymorphism - Layang - Layang
+        BangunDatar layangLayang = new LayangLayang(3,4,5,6,8,9);
+        layangLayang.hitungLuas();
+        layangLayang.hitungKeliling();
+
+
     }
 }
