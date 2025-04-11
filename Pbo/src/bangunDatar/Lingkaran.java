@@ -20,10 +20,10 @@
         }
             public double hitungLuas() {
         return Math.PI * jari * jari;
-    }
+        }
 
-    public double getJari() {
+        public double getJari() {
         return jari;
-    }
+        }
     }
 
