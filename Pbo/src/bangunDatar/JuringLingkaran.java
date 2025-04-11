@@ -8,10 +8,11 @@ public class JuringLingkaran extends Lingkaran {
         this.sudut = sudut;
     }
 
-    @Override
-    public void hitungLuas() {
-        System.out.println("Luas Juring lingkaran : " + (sudut / 360) * super.hitungLuas());
-    }
+@Override
+public void hitungLuas() {
+    double luas = (sudut / 360) * super.getLuas();
+    System.out.println("Luas Juring Lingkaran: " + luas);
+}
 
     @Override
     public void hitungKeliling() {

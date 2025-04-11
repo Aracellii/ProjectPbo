@@ -18,4 +18,12 @@
             double keliling = 2 * phi * jari;
             System.out.println("Keliling lingkaran: " + keliling);
         }
+            public double getLuas() {
+        return Math.PI * jari * jari;
     }
+
+    public double getJari() {
+        return jari;
+    }
+    }
+
