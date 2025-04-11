@@ -10,7 +10,7 @@ public class JuringLingkaran extends Lingkaran {
 
 @Override
 public void hitungLuas() {
-    double luas = (sudut / 360) * super.getLuas();
+    double luas = (sudut / 360) * super.hitungLuas();
     System.out.println("Luas Juring Lingkaran: " + luas);
 }
 

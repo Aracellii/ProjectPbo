@@ -18,7 +18,7 @@
             double keliling = 2 * phi * jari;
             System.out.println("Keliling lingkaran: " + keliling);
         }
-            public double getLuas() {
+            public double hitungLuas() {
         return Math.PI * jari * jari;
     }
 
