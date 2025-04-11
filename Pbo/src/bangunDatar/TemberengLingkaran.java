@@ -2,12 +2,13 @@ package bangunDatar;
 
 public class TemberengLingkaran extends Lingkaran {
     private double sudut;
-    super(jari);//Mengambil dari lingkaran
     public TemberengLingkaran(double jari, double sudut) {
         this.jari = jari;
         this.sudut = sudut;
+        super(jari);//Mengambil dari lingkaran
+
     }
-    }
+
     public double hitungLuas() {
         double luasJuring = (sudut / 360) * super.hitungLuas();
         double luasSegitiga = 0.5 * jariJari * jariJari * Math.sin(Math.toRadians(sudut));

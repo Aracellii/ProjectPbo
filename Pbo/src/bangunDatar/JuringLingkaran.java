@@ -4,7 +4,6 @@ public class JuringLingkaran extends Lingkaran {
     private double sudut;
     
     public JuringLingkaran(double jari, double sudut) {
-        this.nama = "Juring Lingkaran";
         this.jari = jari;
         this.sudut = sudut;
     }
