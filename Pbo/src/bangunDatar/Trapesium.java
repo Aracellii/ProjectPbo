@@ -7,7 +7,7 @@ public class Trapesium extends BangunDatar {
 
     
     
-    public Persegi(double sisi) {
+    public Trapesium(double sisi) {
         this.sisi = sisi;
     }
 

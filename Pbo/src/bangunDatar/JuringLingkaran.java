@@ -9,12 +9,12 @@ public class JuringLingkaran extends Lingkaran {
     }
 
     @Override
-    public double hitungLuas() {
+    public void hitungLuas() {
         return (sudut / 360) * phi * jari * jari;
     }
 
     @Override
-    public double hitungKeliling() {
+    public void hitungKeliling() {
         return (sudut / 360) * 2 * phi * jari + 2 * jari;
     }
 }
