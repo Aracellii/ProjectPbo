@@ -44,6 +44,18 @@
                 Balok balok = new Balok(4,6,8);
                 balok.hitungVolume();
                 balok.hitungLuasPermukaan();
+                
+                System.out.println("");
+                
+                //inisiasi Bola
+                Bola bola = new Bola(7);
+                bola.hitungVolume();
+                bola.hitungLuasPermukaan();
+                
+                //Insiasi Tabung
+                Tabung tabung = new Tabung(7, 10);
+                tabung.hitungVolume();
+                tabung.hitungLuasPermukaan();
 
             }
         }
