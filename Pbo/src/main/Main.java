@@ -52,10 +52,19 @@
                 bola.hitungVolume();
                 bola.hitungLuasPermukaan();
                 
+                System.out.println("");
+
                 //Insiasi Tabung
                 Tabung tabung = new Tabung(7, 10);
                 tabung.hitungVolume();
                 tabung.hitungLuasPermukaan();
+                
+                System.out.println("");
+                
+                //Inisiasi Kerucut
+                Kerucut kerucut = new Kerucut(7, 10,13);
+                kerucut.hitungVolume();
+                kerucut.hitungLuasPermukaan(); 
 
             }
         }
