@@ -1,15 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package bangunRuang;
 import bangunDatar.BangunDatar;
 import bangunDatar.Persegi;
 import bangunDatar.PersegiPanjang;
-/**
- *
- * @author Alfa
- */
+
 public class PrismaSegiEmpat extends BangunRuang {
     private BangunDatar alas;
     private double tinggi;

@@ -1,13 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package bangunRuang;
 import bangunDatar.Persegi;
-/**
- *
- * @author Alfa
- */
+
 public class Kubus extends BangunRuang {
     private Persegi persegi;
 
