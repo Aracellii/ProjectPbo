@@ -31,13 +31,17 @@
                 layangLayang.hitungLuas();
                 layangLayang.hitungKeliling();
 
+                System.out.println("");
+                
                 //Inisiasi Kubus
                 Kubus kubus = new Kubus(5);
                 kubus.hitungVolume();
                 kubus.hitungLuasPermukaan();
                 
+                System.out.println("");
+
                 //Inisisasi Balok
-                Balok balok = new Balok(4, 6, 8);
+                Balok balok = new Balok(4,6,8);
                 balok.hitungVolume();
                 balok.hitungLuasPermukaan();
 

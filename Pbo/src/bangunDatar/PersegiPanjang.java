@@ -1,23 +1,22 @@
 package bangunDatar;
 
 public class PersegiPanjang extends BangunDatar {
-    private double sisi;
     private double panjang;
     private double lebar;
 
-    public PersegiPanjang(double sisi) {
-        this.sisi = sisi;
+    public PersegiPanjang(double panjang,double lebar) {
+        this.panjang = panjang;
     }
 
     @Override
     public void hitungLuas() {
-        double luas = sisi * sisi;
+        double luas = panjang * lebar;
         System.out.println("Luas Persegi Panjang: " + luas);
     }
 
     @Override
     public void hitungKeliling() {
-        double keliling = 4 * sisi;
+        double keliling = 2*panjang*lebar;
         System.out.println("Keliling Persegi Panjang: " + keliling);
     }
         
