@@ -21,7 +21,7 @@ public class Kerucut extends BangunRuang {
     @Override
     public void hitungLuasPermukaan() {
         double r = lingkaran.getJari();
-        double luas = Math.PI * (r+lingkaran.getLuas())
+        double luas = Math.PI * (r+lingkaran.getLuas());
         System.out.println("Luas Permukaan Kerucut: " + luas);
     }
 }
