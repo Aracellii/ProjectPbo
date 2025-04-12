@@ -1,7 +1,7 @@
 package bangunDatar;
 
 public class Persegi extends BangunDatar {
-    private double sisi;
+    protected double sisi;
     
     
     public Persegi(double sisi) {

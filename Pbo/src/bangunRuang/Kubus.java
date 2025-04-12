@@ -1,13 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package BangunRuang;
 
-/**
- *
- * @author L E N O V O
- */
-public class Kubus {
+package bangunRuang;
+
+public class Kubus extends Persegi implements BangunRuang {
+    
+    public Kubus(double sisi) {
+        super(sisi);
+    }
+    
+    public void hitungVolume() {
+        double volume = sisi * sisi * sisi;
+        System.out.println("Luas Kubus: " + volume);
+    }
     
 }
