@@ -2,9 +2,9 @@ package bangunDatar;
 
 public class PersegiPanjang extends BangunDatar {
     private double sisi;
-    
-    
-    public Persegi(double sisi) {
+
+
+    public PersegiPanjang(double sisi) {
         this.sisi = sisi;
     }
 
