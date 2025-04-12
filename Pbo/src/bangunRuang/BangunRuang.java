@@ -1,4 +1,4 @@
-package banngunRuang;
+package bangunRuang;
 
 public interface BangunRuang {
     public abstract void hitungVolume();

@@ -19,4 +19,7 @@ public class Persegi extends BangunDatar {
         double keliling = 4 * sisi;
         System.out.println("Keliling Persegi: " + keliling);
     }
+    public double getSisi() {
+        return sisi;
+    }
 }
