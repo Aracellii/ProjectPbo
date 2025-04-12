@@ -1,7 +1,8 @@
         package main;
 
         import bangunDatar.*;
-import bangunRuang.Kubus;
+        import bangunRuang.*;
+        
         public class Main {
             public static void main(String[] args) {
                 // Polymorphism - Lingkaran
@@ -31,12 +32,9 @@ import bangunRuang.Kubus;
                 layangLayang.hitungKeliling();
 
                 // Polymorphism kubus
-                Bangun kubus = new Kubus();
+                Kubus kubus = new Kubus(5);
                 kubus.hitungVolume();
-                layangLayang.hitungLuasPermukaan();
-
-
-
+                kubus.hitungLuasPermukaan();
 
             }
         }

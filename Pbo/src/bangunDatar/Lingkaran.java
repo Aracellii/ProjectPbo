@@ -6,6 +6,10 @@
         public Lingkaran(double jari) {
             this.jari = jari;
         }
+        
+        public double getJari() {
+        return jari;
+}
 
         @Override
         public void hitungLuas() {

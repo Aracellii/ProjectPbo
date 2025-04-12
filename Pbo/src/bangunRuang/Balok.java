@@ -2,12 +2,33 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package BangunRuang;
-
+package bangunRuang;
+import bangunDatar.PersegiPanjang;
 /**
  *
- * @author L E N O V O
+ * @author Alfa
  */
-public class Balok {
-    
+public class Balok extends BangunRuang {
+    private PersegiPanjang alas;
+    private double tinggi;
+
+    public Balok(double panjang, double lebar, double tinggi) {
+        this.alas = new PersegiPanjang(panjang, lebar);
+        this.tinggi = tinggi;
+    }
+
+    @Override
+    public void hitungVolume() {
+        double volume = alas.getPanjang() * alas.getLebar() * tinggi;
+        System.out.println("Volume Balok: " + volume);
+    }
+
+    @Override
+    public void hitungLuasPermukaan() {
+        double p = alas.getPanjang();
+        double l = alas.getLebar();
+        double t = tinggi;
+        double luas = 2 * (p * l + p * t + l * t);
+        System.out.println("Luas Permukaan Balok: " + luas);
+    }
 }
