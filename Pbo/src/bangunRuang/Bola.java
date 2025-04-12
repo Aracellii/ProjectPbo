@@ -21,4 +21,12 @@ public class Bola extends BangunRuang {
         double luas = 4 * Math.PI * r * r;
         System.out.println("Luas Permukaan Bola: " + luas);
     }
+
+    public double getVolume(){
+        return (4.0 / 3.0) * Math.PI * Math.pow(r, 3);
+    }
+
+    public double getLuasPermukaan(){
+        return 4 * Math.PI * r * r;
+    }
 }
