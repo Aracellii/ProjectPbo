@@ -18,6 +18,13 @@
                 persegi.hitungKeliling();
 
                 System.out.println("");
+                
+                // Polymorphism - Persegi Panjang
+                BangunDatar persegiPanjang = new PersegiPanjang(3,7);
+                persegiPanjang.hitungLuas();
+                persegiPanjang.hitungKeliling();
+
+                System.out.println("");
 
                 // Polymorphism - Segitiga
                 BangunDatar segitiga = new Segitiga(3,4,5,6);
