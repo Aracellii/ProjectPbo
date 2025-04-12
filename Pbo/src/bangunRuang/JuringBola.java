@@ -19,7 +19,7 @@ public class JuringBola extends Bola {
     @Override
     public void hitungLuasPermukaan() {
         double r = lingkaran.getJari();
-        double luas = (sudut / 360) * super.getLuasPermukaan + Math.PI * Math.pow(r,2);
-        System.out.println("Luas Permukaan Bola: " + luas);
+        double luas = (sudut / 360) * super.getLuasPermukaan() + Math.PI * Math.pow(r,2);
+        System.out.println("Luas Permukaan Bola Padat : " + luas);
     }
 }
