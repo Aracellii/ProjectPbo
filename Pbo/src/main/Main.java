@@ -60,11 +60,18 @@
                 tabung.hitungLuasPermukaan();
                 
                 System.out.println("");
-                
+                    
                 //Inisiasi Kerucut
                 Kerucut kerucut = new Kerucut(7, 10,13);
                 kerucut.hitungVolume();
                 kerucut.hitungLuasPermukaan(); 
+                
+                System.out.println("");
+                    
+                //Inisiasi Kerucut
+                JuringBola juringBola = new JuringBola(7,180);
+                juringBola.hitungVolume();
+                juringBola.hitungLuasPermukaan(); 
 
             }
         }

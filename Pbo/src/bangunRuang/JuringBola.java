@@ -6,6 +6,7 @@ public class JuringBola extends Bola {
     private double sudut;
 
     public JuringBola(double jari, double sudut) {
+        super(jari); // ✅ memanggil constructor Bola
         this.lingkaran = new Lingkaran(jari);
         this.sudut = sudut;
     }

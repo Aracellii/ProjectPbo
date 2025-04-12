@@ -22,11 +22,13 @@ public class Bola extends BangunRuang {
         System.out.println("Luas Permukaan Bola: " + luas);
     }
 
-    public double getVolume(){
+    public double getVolume() {
+        double r = lingkaran.getJari();
         return (4.0 / 3.0) * Math.PI * Math.pow(r, 3);
     }
 
-    public double getLuasPermukaan(){
+    public double getLuasPermukaan() {
+        double r = lingkaran.getJari();
         return 4 * Math.PI * r * r;
     }
 }
