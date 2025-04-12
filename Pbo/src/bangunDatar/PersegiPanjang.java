@@ -6,6 +6,7 @@ public class PersegiPanjang extends BangunDatar {
 
     public PersegiPanjang(double panjang,double lebar) {
         this.panjang = panjang;
+        this.lebar = lebar;
     }
 
     @Override
@@ -16,7 +17,7 @@ public class PersegiPanjang extends BangunDatar {
 
     @Override
     public void hitungKeliling() {
-        double keliling = 2*panjang*lebar;
+        double keliling = 2*(panjang+lebar);
         System.out.println("Keliling Persegi Panjang: " + keliling);
     }
         
