@@ -31,10 +31,15 @@
                 layangLayang.hitungLuas();
                 layangLayang.hitungKeliling();
 
-                // Polymorphism kubus
+                //Inisiasi Kubus
                 Kubus kubus = new Kubus(5);
                 kubus.hitungVolume();
                 kubus.hitungLuasPermukaan();
+                
+                //Inisisasi Balok
+                Balok balok = new Balok(4, 6, 8);
+                balok.hitungVolume();
+                balok.hitungLuasPermukaan();
 
             }
         }
