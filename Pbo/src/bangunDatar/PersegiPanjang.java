@@ -23,5 +23,6 @@ public class PersegiPanjang extends BangunDatar {
         
     public double getPanjang() { return panjang; }
     public double getLebar() { return lebar; }
+    @Override
     public double getLuas() { return panjang * lebar; }
 }

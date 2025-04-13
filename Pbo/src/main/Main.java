@@ -79,6 +79,11 @@
                 JuringBola juringBola = new JuringBola(7,180);
                 juringBola.hitungVolume();
                 juringBola.hitungLuasPermukaan(); 
-
+                
+                System.out.println("");
+                LimasSegitiga limasSegitiga = new LimasSegitiga(5,10,6,4);
+                limasSegitiga.hitungVolume();
+                limasSegitiga.hitungLuasPermukaan();
+                
             }
         }

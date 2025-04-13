@@ -13,6 +13,13 @@ public class Segitiga extends BangunDatar {
         this.sisiB = sisiB;
     }
 
+    public Segitiga(double alas, double tinggi) {
+        this.alas = alas;
+        this.tinggi = tinggi;
+        this.sisiA = 0;
+        this.sisiB = 0;
+    }
+
     @Override
     public void hitungLuas() {
         double luas = alas*tinggi/2;
@@ -25,4 +32,17 @@ public class Segitiga extends BangunDatar {
         System.out.println("Keliling Segitiga: " + keliling);
     }
 
+     public double getAlas() {
+        return alas;
+    }
+
+    public double getTinggi() {
+        return tinggi;
+    }
+    
+    @Override
+    public double getLuas() {
+    return 0.5 * alas * tinggi;
+    }   
+    
 }
