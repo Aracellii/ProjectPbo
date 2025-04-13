@@ -1,4 +1,6 @@
 package bangunRuang;
+
+package bangunRuang;
 import bangunDatar.BangunDatar;
 
 public class Limas extends BangunRuang {
