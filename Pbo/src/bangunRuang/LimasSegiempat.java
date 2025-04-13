@@ -1,16 +1,16 @@
 package bangunRuang;
-import bangunDatar.PersegiPanjang;
+import bangunDatar.Persegi;
 import bangunDatar.Segitiga;
 
 
 public class LimasSegiempat extends BangunRuang {
-    private final PersegiPanjang alasLimas;
+    private final Persegi alasLimas;
     private final Segitiga alas;
     private final Segitiga tinggi;
     private final double tinggiLimas;
 
-    public LimasSegiempat(double panjang, double lebar, double tinggiLimas, Segitiga tinggi, Segitiga alas) {
-        this.alasLimas = new PersegiPanjang(panjang, lebar);
+    public LimasSegiempat(double sisi, double tinggiLimas, Segitiga tinggi, Segitiga alas) {
+        this.alasLimas = new Persegi(sisi);
         this.tinggiLimas = tinggiLimas;
         this.tinggi = tinggi;
         this.alas = alas;

@@ -92,7 +92,7 @@
                 
                 System.out.println("");
                 Segitiga sisiLimas = new Segitiga(3,5);
-                LimasSegiempat limasSegiempat = new LimasSegiempat(6,6,4,sisiLimas,sisiLimas);
+                LimasSegiempat limasSegiempat = new LimasSegiempat(6,4,sisiLimas,sisiLimas);
                 limasSegiempat.hitungVolume();
                 limasSegiempat.hitungLuasPermukaan();
             }
