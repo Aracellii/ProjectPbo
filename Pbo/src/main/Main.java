@@ -85,5 +85,9 @@
                 limasSegitiga.hitungVolume();
                 limasSegitiga.hitungLuasPermukaan();
                 
+                System.out.println("");
+                PrismaSegiTiga prismaSegiTiga = new PrismaSegiTiga(5,6,5,5,10);
+                prismaSegiTiga.hitungVolume();
+                prismaSegiTiga.hitungLuasPermukaan();
             }
         }

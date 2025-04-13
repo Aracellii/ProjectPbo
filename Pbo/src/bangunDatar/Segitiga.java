@@ -45,4 +45,7 @@ public class Segitiga extends BangunDatar {
     return 0.5 * alas * tinggi;
     }   
     
+    public double getKeliling() {
+        return alas+sisiA+sisiB;
+    }
 }
