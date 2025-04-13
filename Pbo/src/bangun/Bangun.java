@@ -1,4 +1,4 @@
 package bangun;
 
-public abstract  class Bangun {
+public interface Bangun {
 }

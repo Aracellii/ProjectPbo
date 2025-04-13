@@ -1,6 +1,6 @@
 package bangunDatar;
 import bangun.*;
-public abstract class BangunDatar extends Bangun {
+public abstract class BangunDatar implements Bangun {
     protected double luas;
     protected double keliling;
     public final static double phi = 3.14;
