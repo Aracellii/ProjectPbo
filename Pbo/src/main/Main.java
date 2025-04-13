@@ -34,7 +34,7 @@
                 System.out.println("");
 
                 // Polymorphism - Layang - Layang
-                BangunDatar layangLayang = new LayangLayang(3,4,5,6,8,9);
+                BangunDatar layangLayang = new LayangLayang(3,4,5,6);
                 layangLayang.hitungLuas();
                 layangLayang.hitungKeliling();
 

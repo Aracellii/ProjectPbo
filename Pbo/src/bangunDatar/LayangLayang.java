@@ -3,19 +3,17 @@ package bangunDatar;
 public class LayangLayang extends BangunDatar {
     double diagonalA;
     double diagonalB;
-    double sisiA;
-    double sisiB;
-    double sisiC;
-    double sisiD;
+    double sisiPendek;
+    double sisiPanjang;
 
-    public LayangLayang(double diagonalA, double diagonalB,double sisiA,double sisiB,double sisiC,double sisiD ) {
+
+    public LayangLayang(double diagonalA, double diagonalB,double sisiPendek,double sisiPanjang ) {
 
         this.diagonalA = diagonalA;
         this.diagonalB = diagonalB;
-        this.sisiA = sisiA;
-        this.sisiB = sisiB;
-        this.sisiC = sisiC;
-        this.sisiD = sisiD;
+        this.sisiPendek = sisiPendek;
+        this.sisiPanjang = sisiPanjang;
+
     }
 
     @Override
@@ -26,7 +24,7 @@ public class LayangLayang extends BangunDatar {
 
     @Override
     public void hitungKeliling() {
-        double keliling = sisiA+sisiB+sisiC+sisiD;
+        double keliling = 2*(sisiPanjang+sisiPendek);
         System.out.println("Keliling Layang - Layang: " + keliling);
     }
 }
