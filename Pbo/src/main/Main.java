@@ -95,5 +95,10 @@
                 LimasSegiempat limasSegiempat = new LimasSegiempat(6,4,sisiLimas,sisiLimas);
                 limasSegiempat.hitungVolume();
                 limasSegiempat.hitungLuasPermukaan();
+                
+                System.out.println("");
+                KerucutTerpancung kerucutTerpancung = new KerucutTerpancung (6,3,2,1);
+                kerucutTerpancung.hitungVolume();
+                kerucutTerpancung.hitungLuasPermukaan();
             }
         }
