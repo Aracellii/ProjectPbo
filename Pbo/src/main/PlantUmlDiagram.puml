@@ -2,37 +2,33 @@
 
 ' Abstract Classes
 abstract class BangunRuang {
-    +hitungVolume(): void
-    +hitungLuasPermukaan(): void
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
 }
 
 abstract class BangunDatar {
-    +getLuas(): double
-    +getKeliling(): double
+    +hitungLuas(): double
+    +hitungKeliling(): double
 }
 
 ' Bangun Datar Classes
 class Persegi {
     -sisi: double
-    +getSisi(): double
-    +getLuas(): double
-    +getKeliling(): double
+    +hitungLuas(): double
+    +hitungKeliling(): double
 }
 
 class PersegiPanjang {
     -panjang: double
     -lebar: double
-    +getPanjang(): double
-    +getLebar(): double
-    +getLuas(): double
-    +getKeliling(): double
+    +hitungLuas(): double
+    +hitungKeliling(): double
 }
 
 class Lingkaran {
     -jari: double
-    +getJari(): double
-    +getLuas(): double
-    +getKeliling(): double
+    +hitungLuas(): double
+    +hitungKeliling(): double
 }
 
 class Segitiga {
@@ -40,33 +36,37 @@ class Segitiga {
     -tinggi: double
     -sisiA: double
     -sisiB: double
-    +getAlas(): double
-    +getTinggi(): double
-    +getLuas(): double
-    +getKeliling(): double
+    +hitungLuas(): double
+    +hitungKeliling(): double
 }
 
 ' Bangun Ruang Classes
 class Balok {
     -alas: PersegiPanjang
     -tinggi: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
 }
 
 class Bola {
     -lingkaran: Lingkaran
-    +getVolume(): double
-    +getLuasPermukaan(): double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
 }
 
 class JuringBola {
     -lingkaran: Lingkaran
     -sudut: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
 }
 
 class Kerucut {
     -lingkaran: Lingkaran
     -tinggi: double
     -sisiMiring: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
 }
 
 class KerucutTerpancung {
@@ -74,10 +74,14 @@ class KerucutTerpancung {
     -lingkaran2: Lingkaran
     -tinggi: double
     -sisiMiring: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
 }
 
 class Kubus {
     -persegi: Persegi
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
 }
 
 class LimasSegiempat {
@@ -85,32 +89,44 @@ class LimasSegiempat {
     -alas: Segitiga
     -tinggi: Segitiga
     -tinggiLimas: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
 }
 
 class LimasSegitiga {
     -alas: Segitiga
     -tinggiLimas: double
     -tinggiSisi: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
 }
 
 class PrismaSegiEmpat {
     -alas: BangunDatar
     -tinggi: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
 }
 
 class PrismaSegiTiga {
     -alas: Segitiga
     -tinggiPrisma: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
 }
 
 class Tabung {
     -lingkaran: Lingkaran
     -tinggi: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
 }
 
 class TemberengBola {
     -jari: double
     -tinggi: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
 }
 
 ' Inheritance
