@@ -23,6 +23,6 @@ public class Persegi extends BangunDatar {
         return sisi;
     }
     public double getLuas() {
-        return sisi * sisi;
+        return luas;
     }
 }

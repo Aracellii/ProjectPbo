@@ -1,26 +1,23 @@
 package bangunRuang;
-import bangunDatar.Lingkaran;
 
 public class TemberengBola extends BangunRuang {
-    private Lingkaran lingkaran;
+    private double jari;
     private double tinggi;
 
     public TemberengBola(double jari, double tinggi) {
-        this.lingkaran = new Lingkaran(jari);
+        this.jari = jari;
         this.tinggi = tinggi;
     }
 
     @Override
     public void hitungVolume() {
-        double r = lingkaran.getJari();
-        double volume = (1.0 / 6.0) * Math.PI * tinggi * tinggi * (3 * r - tinggi);
+        double volume = (Math.PI * tinggi * tinggi * (3 * jari - tinggi)) / 3;
         System.out.println("Volume Tembereng Bola: " + volume);
     }
 
     @Override
     public void hitungLuasPermukaan() {
-        double r = lingkaran.getJari();
-        double luas = 2 * Math.PI * r * tinggi;
+        double luas = 2 * Math.PI * jari * tinggi;
         System.out.println("Luas Permukaan Tembereng Bola: " + luas);
     }
 }
