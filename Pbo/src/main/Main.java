@@ -100,5 +100,11 @@
                 KerucutTerpancung kerucutTerpancung = new KerucutTerpancung (6,3,2,1);
                 kerucutTerpancung.hitungVolume();
                 kerucutTerpancung.hitungLuasPermukaan();
+                
+                System.out.println("");
+                TemberengBola temberengBola = new TemberengBola(7, 3); // contoh: jari-jari = 7, tinggi = 3
+                temberengBola.hitungVolume();
+                temberengBola.hitungLuasPermukaan();
+
             }
         }
