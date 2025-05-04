@@ -1,0 +1,149 @@
+classDiagram
+
+%% Abstract classes
+    class BangunRuang {
+        <<abstract>>
+        +hitungVolume(): void
+        +hitungLuasPermukaan(): void
+    }
+
+    class BangunDatar {
+        <<abstract>>
+        +getLuas(): double
+        +getKeliling(): double
+    }
+
+%% Bangun Datar
+    class Persegi {
+        -sisi: double
+        +getSisi(): double
+        +getLuas(): double
+        +getKeliling(): double
+    }
+
+    class PersegiPanjang {
+        -panjang: double
+        -lebar: double
+        +getPanjang(): double
+        +getLebar(): double
+        +getLuas(): double
+        +getKeliling(): double
+    }
+
+    class Lingkaran {
+        -jari: double
+        +getJari(): double
+        +getLuas(): double
+        +getKeliling(): double
+    }
+
+    class Segitiga {
+        -alas: double
+        -tinggi: double
+        -sisiA: double
+        -sisiB: double
+        +getAlas(): double
+        +getTinggi(): double
+        +getLuas(): double
+        +getKeliling(): double
+    }
+
+%% Bangun Ruang
+    class Balok {
+        -alas: PersegiPanjang
+        -tinggi: double
+    }
+
+    class Bola {
+        -lingkaran: Lingkaran
+    }
+
+    class JuringBola {
+        -lingkaran: Lingkaran
+        -sudut: double
+    }
+
+    class Kerucut {
+        -lingkaran: Lingkaran
+        -tinggi: double
+        -sisiMiring: double
+    }
+
+    class KerucutTerpancung {
+        -lingkaran1: Lingkaran
+        -lingkaran2: Lingkaran
+        -tinggi: double
+        -sisiMiring: double
+    }
+
+    class Kubus {
+        -persegi: Persegi
+    }
+
+    class LimasSegiempat {
+        -alasLimas: Persegi
+        -alas: Segitiga
+        -tinggi: Segitiga
+        -tinggiLimas: double
+    }
+
+    class LimasSegitiga {
+        -alas: Segitiga
+        -tinggiLimas: double
+        -tinggiSisi: double
+    }
+
+    class PrismaSegiEmpat {
+        -alas: BangunDatar
+        -tinggi: double
+    }
+
+    class PrismaSegiTiga {
+        -alas: Segitiga
+        -tinggiPrisma: double
+    }
+
+    class Tabung {
+        -lingkaran: Lingkaran
+        -tinggi: double
+    }
+
+    class TemberengBola {
+        -jari: double
+        -tinggi: double
+    }
+
+%% Inheritance
+    BangunRuang <|-- Balok
+    BangunRuang <|-- Bola
+    BangunRuang <|-- JuringBola
+    BangunRuang <|-- Kerucut
+    BangunRuang <|-- KerucutTerpancung
+    BangunRuang <|-- Kubus
+    BangunRuang <|-- LimasSegiempat
+    BangunRuang <|-- LimasSegitiga
+    BangunRuang <|-- PrismaSegiEmpat
+    BangunRuang <|-- PrismaSegiTiga
+    BangunRuang <|-- Tabung
+    BangunRuang <|-- TemberengBola
+
+    BangunDatar <|-- Persegi
+    BangunDatar <|-- PersegiPanjang
+    BangunDatar <|-- Lingkaran
+    BangunDatar <|-- Segitiga
+
+%% Composition (as association lines with *)
+    Balok --> PersegiPanjang : alas
+    Bola --> Lingkaran : lingkaran
+    JuringBola --> Lingkaran : lingkaran
+    Kerucut --> Lingkaran : lingkaran
+    KerucutTerpancung --> Lingkaran : lingkaran1
+    KerucutTerpancung --> Lingkaran : lingkaran2
+    Kubus --> Persegi : persegi
+    LimasSegiempat --> Persegi : alasLimas
+    LimasSegiempat --> Segitiga : alas
+    LimasSegiempat --> Segitiga : tinggi
+    LimasSegitiga --> Segitiga : alas
+    PrismaSegiEmpat --> BangunDatar : alas
+    PrismaSegiTiga --> Segitiga : alas
+    Tabung --> Lingkaran : lingkaran
