@@ -111,7 +111,7 @@ public class Main {
 
         System.out.println("");
 
-        // Inisiasi TemberengBola (hanya 1 kali deklarasi variabel)
+        // Inisiasi TemberengBola 
         TemberengBola temberengBola = new TemberengBola(7, 3);
         temberengBola.hitungVolume();
         temberengBola.hitungLuasPermukaan();
