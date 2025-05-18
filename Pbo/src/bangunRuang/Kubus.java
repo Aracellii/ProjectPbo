@@ -1,7 +1,7 @@
 
 package bangunRuang;
 import bangunDatar.Persegi;
-public class Kubus extends Persegi implements BangunRuang {
+public class Kubus extends Persegi  {
     
     public Kubus(double sisi) {
         super(sisi);
@@ -11,5 +11,8 @@ public class Kubus extends Persegi implements BangunRuang {
         double volume = sisi * sisi * sisi;
         System.out.println("Luas Kubus: " + volume);
     }
-    
+    public void hitungLuasPermukaan() {
+        double luas = 6 * sisi * sisi;
+        System.out.println("Luas Permukaan Kubus: " + luas);
+    }
 }

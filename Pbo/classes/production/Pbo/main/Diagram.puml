@@ -1,0 +1,205 @@
+@startuml
+
+' Interfaces
+interface BangunRuang {
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
+}
+
+interface BangunDatar {
+    +hitungLuas(): double
+    +hitungKeliling(): double
+}
+
+' Bangun Datar Classes
+class Lingkaran {
+    -jari: double
+    +hitungLuas(): double
+    +hitungKeliling(): double
+}
+class Persegi {
+    -sisi: double
+    +hitungLuas(): double
+    +hitungKeliling(): double
+}
+
+class PersegiPanjang {
+    -panjang: double
+    -lebar: double
+    +hitungLuas(): double
+    +hitungKeliling(): double
+}
+
+
+
+class Segitiga {
+    -alas: double
+    -tinggi: double
+    -sisiA: double
+    -sisiB: double
+    +hitungLuas(): double
+    +hitungKeliling(): double
+}
+
+class LayangLayang {
+    -d1: double
+    -d2: double
+    -sisiA: double
+    -sisiB: double
+    +hitungLuas(): double
+    +hitungKeliling(): double
+}
+
+class BelahKetupat {
+    -d1: double
+    -d2: double
+    -sisi: double
+    +hitungLuas(): double
+    +hitungKeliling(): double
+}
+
+class Trapesium {
+    -sisiA: double
+    -sisiB: double
+    -sisiC: double
+    -sisiD: double
+    -tinggi: double
+    +hitungLuas(): double
+    +hitungKeliling(): double
+}
+
+class JajarGenjang {
+    -alas: double
+    -tinggi: double
+    -sisiMiring: double
+    +hitungLuas(): double
+    +hitungKeliling(): double
+}
+
+' Bangun Ruang Classes
+class Balok {
+    -alas: PersegiPanjang
+    -tinggi: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
+}
+
+class Bola {
+    -lingkaran: Lingkaran
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
+}
+
+class JuringBola {
+    -lingkaran: Lingkaran
+    -sudut: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
+}
+
+class Kerucut {
+    -lingkaran: Lingkaran
+    -tinggi: double
+    -sisiMiring: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
+}
+
+class KerucutTerpancung {
+    -lingkaran1: Lingkaran
+    -lingkaran2: Lingkaran
+    -tinggi: double
+    -sisiMiring: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
+}
+
+class Kubus {
+    -persegi: Persegi
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
+}
+
+class LimasSegiempat {
+    -alasLimas: Persegi
+    -alas: Segitiga
+    -tinggi: Segitiga
+    -tinggiLimas: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
+}
+
+class LimasSegitiga {
+    -alas: Segitiga
+    -tinggiLimas: double
+    -tinggiSisi: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
+}
+
+class PrismaSegiEmpat {
+    -alas: Persegi
+    -tinggi: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
+}
+
+class PrismaSegiTiga {
+    -alas: Segitiga
+    -tinggiPrisma: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
+}
+
+class Tabung {
+    -lingkaran: Lingkaran
+    -tinggi: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
+}
+
+class TemberengBola {
+    -jari: double
+    -tinggi: double
+    +hitungVolume(): double
+    +hitungLuasPermukaan(): double
+}
+
+' Implementations
+BangunDatar <|.. Persegi
+BangunDatar <|.. PersegiPanjang
+BangunDatar <|.. Lingkaran
+BangunDatar <|.. Segitiga
+BangunDatar <|.. LayangLayang
+BangunDatar <|.. BelahKetupat
+BangunDatar <|.. Trapesium
+BangunDatar <|.. JajarGenjang
+
+BangunRuang <|.. Balok
+BangunRuang <|.. Bola
+BangunRuang <|.. JuringBola
+BangunRuang <|.. Kerucut
+BangunRuang <|.. KerucutTerpancung
+BangunRuang <|.. Kubus
+BangunRuang <|.. LimasSegiempat
+BangunRuang <|.. LimasSegitiga
+BangunRuang <|.. PrismaSegiEmpat
+BangunRuang <|.. PrismaSegiTiga
+BangunRuang <|.. Tabung
+BangunRuang <|.. TemberengBola
+
+' Composition
+Balok --> PersegiPanjang
+Bola --> Lingkaran
+JuringBola --> Lingkaran
+Kerucut --> Lingkaran
+KerucutTerpancung --> Lingkaran
+Kubus --> Persegi
+LimasSegiempat --> Persegi
+LimasSegiempat --> Segitiga
+LimasSegitiga --> Segitiga
+PrismaSegiEmpat --> Persegi
+PrismaSegiTiga --> Segitiga
+Tabung --> Lingkaran
+TemberengBola --> Lingkaran
+@enduml

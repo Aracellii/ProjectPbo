@@ -1,11 +1,7 @@
 package bangunDatar;
 
 public class JuringLingkaran extends Lingkaran {
-<<<<<<< Updated upstream
     private final double sudut;
-=======
-    private double sudut;
->>>>>>> Stashed changes
 
     public JuringLingkaran(double jari, double sudut) {
         super(jari);
@@ -17,14 +13,9 @@ public class JuringLingkaran extends Lingkaran {
         System.out.println("Luas Juring lingkaran: " + luasJuring);
     }
 
-<<<<<<< Updated upstream
     @Override
-    public void hitungKeliling() {    
-        double kelilingJuring = (sudut / 360) * super.getKeliling() + 2 * jari;
-=======
-    public void hitungKeliling() {    
-        double kelilingJuring = (sudut / 360) super.getKeliling() + 2 * jari;
->>>>>>> Stashed changes
+    public void hitungKeliling() {
+        double kelilingJuring = (sudut / 360) * super.getKeliling() + 2 * super.getJari();
         System.out.println("Keliling Juring lingkaran: " + kelilingJuring);
     }
 }
