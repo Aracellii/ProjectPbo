@@ -1,40 +1,33 @@
 classDiagram
-
-%% Abstract classes
+%% Interfaces
     class BangunRuang {
-        <<abstract>>
-        +hitungVolume(): void
-        +hitungLuasPermukaan(): void
+        +hitungVolume(): double
+        +hitungLuasPermukaan(): double
     }
 
     class BangunDatar {
-        <<abstract>>
-        +getLuas(): double
-        +getKeliling(): double
+        +hitungLuas(): double
+        +hitungKeliling(): double
     }
 
-%% Bangun Datar
+%% Bangun Datar Classes
+    class Lingkaran {
+        -jari: double
+        +hitungLuas(): double
+        +hitungKeliling(): double
+    }
+
     class Persegi {
         -sisi: double
-        +getSisi(): double
-        +getLuas(): double
-        +getKeliling(): double
+        +hitungLuas(): double
+        +hitungKeliling(): double
     }
 
     class PersegiPanjang {
         -panjang: double
         -lebar: double
-        +getPanjang(): double
-        +getLebar(): double
-        +getLuas(): double
-        +getKeliling(): double
-    }
-
-    class Lingkaran {
-        -jari: double
-        +getJari(): double
-        +getLuas(): double
-        +getKeliling(): double
+        +hitungLuas(): double
+        +hitungKeliling(): double
     }
 
     class Segitiga {
@@ -42,31 +35,72 @@ classDiagram
         -tinggi: double
         -sisiA: double
         -sisiB: double
-        +getAlas(): double
-        +getTinggi(): double
-        +getLuas(): double
-        +getKeliling(): double
+        +hitungLuas(): double
+        +hitungKeliling(): double
     }
 
-%% Bangun Ruang
+    class LayangLayang {
+        -d1: double
+        -d2: double
+        -sisiA: double
+        -sisiB: double
+        +hitungLuas(): double
+        +hitungKeliling(): double
+    }
+
+    class BelahKetupat {
+        -d1: double
+        -d2: double
+        -sisi: double
+        +hitungLuas(): double
+        +hitungKeliling(): double
+    }
+
+    class Trapesium {
+        -sisiA: double
+        -sisiB: double
+        -sisiC: double
+        -sisiD: double
+        -tinggi: double
+        +hitungLuas(): double
+        +hitungKeliling(): double
+    }
+
+    class JajarGenjang {
+        -alas: double
+        -tinggi: double
+        -sisiMiring: double
+        +hitungLuas(): double
+        +hitungKeliling(): double
+    }
+
+%% Bangun Ruang Classes
     class Balok {
         -alas: PersegiPanjang
         -tinggi: double
+        +hitungVolume(): double
+        +hitungLuasPermukaan(): double
     }
 
     class Bola {
         -lingkaran: Lingkaran
+        +hitungVolume(): double
+        +hitungLuasPermukaan(): double
     }
 
     class JuringBola {
         -lingkaran: Lingkaran
         -sudut: double
+        +hitungVolume(): double
+        +hitungLuasPermukaan(): double
     }
 
     class Kerucut {
         -lingkaran: Lingkaran
         -tinggi: double
         -sisiMiring: double
+        +hitungVolume(): double
+        +hitungLuasPermukaan(): double
     }
 
     class KerucutTerpancung {
@@ -74,10 +108,14 @@ classDiagram
         -lingkaran2: Lingkaran
         -tinggi: double
         -sisiMiring: double
+        +hitungVolume(): double
+        +hitungLuasPermukaan(): double
     }
 
     class Kubus {
         -persegi: Persegi
+        +hitungVolume(): double
+        +hitungLuasPermukaan(): double
     }
 
     class LimasSegiempat {
@@ -85,65 +123,80 @@ classDiagram
         -alas: Segitiga
         -tinggi: Segitiga
         -tinggiLimas: double
+        +hitungVolume(): double
+        +hitungLuasPermukaan(): double
     }
 
     class LimasSegitiga {
         -alas: Segitiga
         -tinggiLimas: double
         -tinggiSisi: double
+        +hitungVolume(): double
+        +hitungLuasPermukaan(): double
     }
 
     class PrismaSegiEmpat {
-        -alas: BangunDatar
+        -alas: Persegi
         -tinggi: double
+        +hitungVolume(): double
+        +hitungLuasPermukaan(): double
     }
 
     class PrismaSegiTiga {
         -alas: Segitiga
         -tinggiPrisma: double
+        +hitungVolume(): double
+        +hitungLuasPermukaan(): double
     }
 
     class Tabung {
         -lingkaran: Lingkaran
         -tinggi: double
+        +hitungVolume(): double
+        +hitungLuasPermukaan(): double
     }
 
     class TemberengBola {
         -jari: double
         -tinggi: double
+        +hitungVolume(): double
+        +hitungLuasPermukaan(): double
     }
 
-%% Inheritance
-    BangunRuang <|-- Balok
-    BangunRuang <|-- Bola
-    BangunRuang <|-- JuringBola
-    BangunRuang <|-- Kerucut
-    BangunRuang <|-- KerucutTerpancung
-    BangunRuang <|-- Kubus
-    BangunRuang <|-- LimasSegiempat
-    BangunRuang <|-- LimasSegitiga
-    BangunRuang <|-- PrismaSegiEmpat
-    BangunRuang <|-- PrismaSegiTiga
-    BangunRuang <|-- Tabung
-    BangunRuang <|-- TemberengBola
+%% Implementations
+    BangunDatar <|.. Persegi
+    BangunDatar <|.. PersegiPanjang
+    BangunDatar <|.. Lingkaran
+    BangunDatar <|.. Segitiga
+    BangunDatar <|.. LayangLayang
+    BangunDatar <|.. BelahKetupat
+    BangunDatar <|.. Trapesium
+    BangunDatar <|.. JajarGenjang
 
-    BangunDatar <|-- Persegi
-    BangunDatar <|-- PersegiPanjang
-    BangunDatar <|-- Lingkaran
-    BangunDatar <|-- Segitiga
+    BangunRuang <|.. Balok
+    BangunRuang <|.. Bola
+    BangunRuang <|.. JuringBola
+    BangunRuang <|.. Kerucut
+    BangunRuang <|.. KerucutTerpancung
+    BangunRuang <|.. Kubus
+    BangunRuang <|.. LimasSegiempat
+    BangunRuang <|.. LimasSegitiga
+    BangunRuang <|.. PrismaSegiEmpat
+    BangunRuang <|.. PrismaSegiTiga
+    BangunRuang <|.. Tabung
+    BangunRuang <|.. TemberengBola
 
-%% Composition (as association lines with *)
-    Balok --> PersegiPanjang : alas
-    Bola --> Lingkaran : lingkaran
-    JuringBola --> Lingkaran : lingkaran
-    Kerucut --> Lingkaran : lingkaran
-    KerucutTerpancung --> Lingkaran : lingkaran1
-    KerucutTerpancung --> Lingkaran : lingkaran2
-    Kubus --> Persegi : persegi
-    LimasSegiempat --> Persegi : alasLimas
-    LimasSegiempat --> Segitiga : alas
-    LimasSegiempat --> Segitiga : tinggi
-    LimasSegitiga --> Segitiga : alas
-    PrismaSegiEmpat --> BangunDatar : alas
-    PrismaSegiTiga --> Segitiga : alas
-    Tabung --> Lingkaran : lingkaran
+%% Composition
+    Balok --> PersegiPanjang
+    Bola --> Lingkaran
+    JuringBola --> Lingkaran
+    Kerucut --> Lingkaran
+    KerucutTerpancung --> Lingkaran
+    Kubus --> Persegi
+    LimasSegiempat --> Persegi
+    LimasSegiempat --> Segitiga
+    LimasSegitiga --> Segitiga
+    PrismaSegiEmpat --> Persegi
+    PrismaSegiTiga --> Segitiga
+    Tabung --> Lingkaran
+    TemberengBola --> Lingkaran
