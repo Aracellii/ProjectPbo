@@ -13,7 +13,6 @@ public class LayangLayang extends BangunDatar {
         this.diagonalB = diagonalB;
         this.sisiPendek = sisiPendek;
         this.sisiPanjang = sisiPanjang;
-
     }
 
     @Override

@@ -1,4 +1,5 @@
-package bangunRuang;
+package bangunDatar;
+import bangunDatar.Segitiga;
 
 public class TemberengBola extends BangunRuang {
     private double jari;

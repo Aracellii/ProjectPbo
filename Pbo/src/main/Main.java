@@ -1,7 +1,17 @@
 package main;
 
+import bangunDatar.Tabung;
+import bangunDatar.TemberengBola;
+import bangunDatar.LimasSegitiga;
+import bangunDatar.JuringBola;
+import bangunDatar.Bola;
+import bangunDatar.LimasSegiempat;
+import bangunDatar.Balok;
+import bangunDatar.Kubus;
+import bangunDatar.Kerucut;
+import bangunDatar.KerucutTerpancung;
+import bangunDatar.PrismaSegiTiga;
 import bangunDatar.*;
-import bangunRuang.*;
 
 public class Main {
     public static void main(String[] args) {

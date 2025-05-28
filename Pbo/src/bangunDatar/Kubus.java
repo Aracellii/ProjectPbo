@@ -1,5 +1,4 @@
-
-package bangunRuang;
+package bangunDatar;
 import bangunDatar.Persegi;
 public class Kubus extends Persegi  {
     

@@ -1,4 +1,4 @@
-package bangunRuang;
+package bangunDatar;
 import bangunDatar.Lingkaran;
 
 public class KerucutTerpancung extends BangunRuang {

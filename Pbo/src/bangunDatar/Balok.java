@@ -1,4 +1,4 @@
-package bangunRuang;
+package bangunDatar;
 import bangunDatar.PersegiPanjang;
 
 public class Balok extends BangunRuang {

@@ -1,5 +1,5 @@
-package bangunRuang;
-import bangunDatar.Lingkaran;
+package bangunDatar;
+import bangunDatar.Lingkaran; 
 
 public class Bola extends BangunRuang {
     private Lingkaran lingkaran;
@@ -32,3 +32,5 @@ public class Bola extends BangunRuang {
         return 4 * Math.PI * r * r;
     }
 }
+
+// blom objek oriented blm samsek blm
