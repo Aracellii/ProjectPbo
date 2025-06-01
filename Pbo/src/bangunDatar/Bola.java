@@ -1,36 +1,29 @@
 package bangunDatar;
-import bangunDatar.Lingkaran; 
 
-public class Bola extends BangunRuang {
-    private Lingkaran lingkaran;
-
+public class Bola extends Lingkaran {
     public Bola(double jari) {
-        this.lingkaran = new Lingkaran(jari);
+        super(jari);
     }
 
-    @Override
     public void hitungVolume() {
-        double r = lingkaran.getJari();
+        double r = getJari();
         double volume = (4.0 / 3.0) * Math.PI * Math.pow(r, 3);
         System.out.println("Volume Bola: " + volume);
     }
 
-    @Override
     public void hitungLuasPermukaan() {
-        double r = lingkaran.getJari();
+        double r = getJari();
         double luas = 4 * Math.PI * r * r;
         System.out.println("Luas Permukaan Bola: " + luas);
     }
 
     public double getVolume() {
-        double r = lingkaran.getJari();
+        double r = getJari();
         return (4.0 / 3.0) * Math.PI * Math.pow(r, 3);
     }
 
     public double getLuasPermukaan() {
-        double r = lingkaran.getJari();
+        double r = getJari();
         return 4 * Math.PI * r * r;
     }
 }
-
-// blom objek oriented blm samsek blm
