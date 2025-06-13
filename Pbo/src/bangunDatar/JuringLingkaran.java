@@ -13,13 +13,13 @@ public class JuringLingkaran extends Lingkaran {
       
     @Override
     public double hitungLuas() {
-        luasJuring = (sudut / 360) * super.hitungLuas();
+        luasJuring = (sudut / 360) * super.luas;
         return luasJuring;
     }
 
     @Override
     public double hitungKeliling() {
-        kelilingJuring = (sudut / 360) * super.hitungKeliling() + 2 * super.jari;
+        kelilingJuring = (sudut / 360) * super.luas + 2 * super.jari;
         return kelilingJuring;
     }
 
