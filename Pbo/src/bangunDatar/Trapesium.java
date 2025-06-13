@@ -29,5 +29,6 @@ public class Trapesium extends BangunDatar {
     @Override
     public double hitungKeliling() {
         keliling = sisiAtas + sisiKanan + sisiBawah + sisiKiri;
+        return keliling;
     }
 }
