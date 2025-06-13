@@ -1,27 +1,34 @@
 package bangunDatar;
-import bangunDatar.Lingkaran;
 
-public class Kerucut extends BangunRuang {
-    private Lingkaran lingkaran;
-    private double tinggi;
-    private double sisiMiring;
+public class Kerucut extends Lingkaran {
+    protected double tinggi;
+    protected double volume;
+    protected double luasPermukaan;
+    
     public Kerucut(double jari, double tinggi,double sisiMiring) {
-        this.lingkaran = new Lingkaran(jari);
+        super(jari);
         this.tinggi = tinggi;
-        this.sisiMiring = sisiMiring;
+        this.luasPermukaan = hitungLuasPermukaan();
+        this.volume = hitungVolume();
     }
 
-    @Override
-    public void hitungVolume() {
-        double r = lingkaran.getJari();
-        double volume = Math.PI * r * r * tinggi/3;
-        System.out.println("Volume Kerucut: " + volume);
+    public double hitungVolume() { //jika jari tidak ganti baru
+        volume = 1/3 * super.luas * tinggi;
+        return volume;
     }
 
-    @Override
-    public void hitungLuasPermukaan() {
-        double r = lingkaran.getJari();
-        double luas = Math.PI * (r+lingkaran.getLuas());
-        System.out.println("Luas Permukaan Kerucut: " + luas);
+    public double hitungLuasPermukaan() { //jika jari tidak ganti baru
+        luasPermukaan = Math.PI * (jari + (Math.sqrt(jari * jari + tinggi * tinggi)));
+        return luasPermukaan;
+    }
+    
+    public double hitungVolume(double jariBaru) { //jika jari ganti baru
+        volume = 1/3 * Math.PI * jariBaru * jariBaru * tinggi;
+        return volume;
+    }
+    
+    public double hitungLuasPermukaan(double jariBaru) { //jika jari ganti baru
+        luasPermukaan = Math.PI * (jariBaru + (Math.sqrt(jariBaru * jariBaru + tinggi * tinggi)));
+        return luasPermukaan;
     }
 }
