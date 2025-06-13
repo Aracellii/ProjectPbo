@@ -1,9 +1,12 @@
 package bangunDatar;
 import bangunDatar.PersegiPanjang;
+import bangun.Bangun;
 
-public class Balok extends BangunRuang {
-    private final PersegiPanjang alas;
-    private final double tinggi;
+public class Balok extends BangunRuang implements Bangun {
+    protected final PersegiPanjang alas;
+    protected final double tinggi;
+    protected double volume;
+    protected double LuasPermukaan;
 
     public Balok(double panjang, double lebar, double tinggi) {
         this.alas = new PersegiPanjang(panjang, lebar);

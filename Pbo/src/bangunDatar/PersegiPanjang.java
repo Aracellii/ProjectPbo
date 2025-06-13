@@ -1,28 +1,26 @@
 package bangunDatar;
+import bangun.Bangun;
 
-public class PersegiPanjang extends BangunDatar {
-    private double panjang;
-    private double lebar;
-
+public class PersegiPanjang extends BangunDatar implements Bangun {
+    protected double panjang;
+    protected double lebar;
+    protected double luas;
+    protected double keliling;
+    
     public PersegiPanjang(double panjang,double lebar) {
         this.panjang = panjang;
         this.lebar = lebar;
     }
 
     @Override
-    public void hitungLuas() {
-        double luas = panjang * lebar;
-        System.out.println("Luas Persegi Panjang: " + luas);
+    public double hitungLuas() {
+        luas = panjang * lebar;
+        return luas;
     }
 
     @Override
-    public void hitungKeliling() {
-        double keliling = 2*(panjang+lebar);
-        System.out.println("Keliling Persegi Panjang: " + keliling);
+    public double hitungKeliling() {
+        keliling = 2*(panjang+lebar);
+        return keliling;
     }
-        
-    public double getPanjang() { return panjang; }
-    public double getLebar() { return lebar; }
-    @Override
-    public double getLuas() { return panjang * lebar; }
 }
