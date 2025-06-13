@@ -11,13 +11,13 @@ public class Bola extends Lingkaran {
     }
 
     public double hitungVolume() {
-        volume = (4.0 / 3.0) * super.hitungLuas()*super.jari;
+        volume = (4.0 / 3.0) * super.luas*super.jari;
         return volume;
 
     }   
 
     public double hitungLuasPermukaan() {
-        luasPermukaan = 4 * super.hitungLuas();
+        luasPermukaan = 4 * super.luas;
         return luasPermukaan;
     }
 

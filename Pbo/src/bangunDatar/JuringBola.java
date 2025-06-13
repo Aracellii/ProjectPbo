@@ -1,6 +1,5 @@
 package bangunDatar;
 public class JuringBola extends Bola {
-    protected Lingkaran lingkaran;
     protected double sudut;
     protected double volumeJuring;
     protected double luasPermukaanJuring;
@@ -10,13 +9,13 @@ public class JuringBola extends Bola {
     }
     @Override
     public double hitungVolume() {
-        volumeJuring = (sudut / 360) * super.hitungVolume();
+        volumeJuring = (sudut / 360) * super.volume;
         return volumeJuring;
     }
 
     @Override
     public double hitungLuasPermukaan() {
-        luasPermukaanJuring = (sudut / 360) * super.hitungLuasPermukaan()+ Math.PI * Math.pow(super.jari,2);
+        luasPermukaanJuring = (sudut / 360) * super.luas+ Math.PI * Math.pow(super.jari,2);
         return luasPermukaanJuring;
     }
 
