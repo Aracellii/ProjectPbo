@@ -1,6 +1,7 @@
     package bangunDatar;
-
-    public class Lingkaran extends Lingkaran {
+    import bangun.Bangun;
+    
+    public class Lingkaran extends BangunDatar implements Bangun {
         protected double jari;
         protected double luas;
         protected double keliling;
