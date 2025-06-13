@@ -1,31 +1,26 @@
 package bangunDatar;
-import bangunDatar.Persegi;
-import bangunDatar.Segitiga;
 
 
-public class LimasSegiempat extends BangunRuang {
-    private final Persegi alasLimas;
-    private final Segitiga alas;
-    private final Segitiga tinggi;
-    private final double tinggiLimas;
+public class LimasSegiempat extends Persegi {
+    private double tinggiLimas;
+    private double sisi;
+    private double volume;
+    private double luasPermukaan;
+    private double luasSisiTegak;
 
-    public LimasSegiempat(double sisi, double tinggiLimas, Segitiga tinggi, Segitiga alas) {
-        this.alasLimas = new Persegi(sisi);
+    public LimasSegiempat(double sisi, double tinggiLimas) {
+        super(sisi);
         this.tinggiLimas = tinggiLimas;
-        this.tinggi = tinggi;
-        this.alas = alas;
     }
 
-    @Override
-    public void hitungVolume() {
-        double volume = (1.0 / 3.0) * alasLimas.getLuas() * tinggiLimas;
-        System.out.println("Volume Limas Segiempat: " + volume);
+    public double hitungVolume() {
+        volume = (1.0 / 3.0) * super.luas * tinggiLimas;
+        return volume;
     }
 
-    @Override
-    public void hitungLuasPermukaan() {
-        double luasSisiTegak = 4 * (0.5 * alas.getAlas() * tinggi.getTinggi());
-        double luasPermukaan = alasLimas.getLuas() + luasSisiTegak;
-        System.out.println("Luas Permukaan Limas Segiempat: " + luasPermukaan);
+    public double hitungLuasPermukaan() {
+        luasSisiTegak = 4 * (0.5 * super.sisi * tinggiLimas);
+        luasPermukaan = super.luas + luasSisiTegak;
+        return luasPermukaan;
     }
 }
