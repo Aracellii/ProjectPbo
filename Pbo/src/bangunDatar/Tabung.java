@@ -1,15 +1,13 @@
 package bangunDatar;
 
 public class Tabung extends Lingkaran {
-    private double tinggi;
+    private final double tinggi;
     private double volume;
     private double luasPermukaan;
 
     public Tabung(double jari, double tinggi) {
         super(jari);
         this.tinggi = tinggi;
-        this.hitungVolume();
-        this.hitungLuasPermukaan();
     }
 
     public double hitungVolume() {
