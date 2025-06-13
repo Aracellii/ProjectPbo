@@ -10,6 +10,8 @@ public class PersegiPanjang extends BangunDatar implements Bangun {
     public PersegiPanjang(double panjang,double lebar) {
         this.panjang = panjang;
         this.lebar = lebar;
+        this.keliling = hitungKeliling();
+        this.luas = hitungLuas();
     }
 
     @Override
