@@ -1,24 +1,23 @@
 package bangunDatar;
-import bangunDatar.Segitiga;
 
-public class PrismaSegiTiga extends BangunRuang {
-    private final Segitiga alas;
+public class PrismaSegiTiga extends Segitiga {
     private final double tinggiPrisma;
+    private double volume;
+    private double luasPermukaan;
 
     public PrismaSegiTiga(double alas, double tinggi, double sisiA, double sisiB, double tinggiPrisma) {
-        this.alas = new Segitiga(alas, tinggi, sisiA, sisiB);
-        this.tinggiPrisma = tinggiPrisma;
+        super(alas, tinggi, sisiA, sisiB);
+        this.tinggiPrisma = tinggiPrisma;   
     }
 
-    @Override
-    public void hitungVolume() {
-        double volume = alas.getLuas() * tinggiPrisma;
-        System.out.println("Volume Prisma Segitiga: " + volume);
+    public double hitungVolume() {
+        volume = super.alas * tinggiPrisma;
+        return volume;
     }
 
-    @Override
-    public void hitungLuasPermukaan() {
-        double luasPermukaan = (2 * alas.getLuas()) + (alas.getKeliling() * tinggiPrisma);
-        System.out.println("Luas Permukaan Prisma Segitiga: " + luasPermukaan);
+    public double hitungLuasPermukaan() {
+        luasPermukaan = 2 * super.alas + super.keliling * tinggiPrisma;
+        return luasPermukaan;
     }
+    
 }
