@@ -12,7 +12,7 @@ public class TemberengBola extends Lingkaran {
         this.luasPermukaan = hitungLuasPermukaan();
 
     }
-
+    
     public double hitungVolume() {
         volume = (Math.PI * tinggi * tinggi * (3 * jari - tinggi)) / 3;
         return volume;

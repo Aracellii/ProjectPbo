@@ -1,6 +1,6 @@
     package bangunDatar;
 
-    public class Lingkaran extends Lingkaran {
+    public class Lingkaran extends BangunDatar {
         protected double jari;
         protected double luas;
         protected double keliling;
