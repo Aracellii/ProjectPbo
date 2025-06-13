@@ -1,29 +1,29 @@
 package bangunDatar;
 
-import bangunDatar.Segitiga;
+public class LimasSegitiga extends Segitiga {
+    private final double tinggiLimas;
+    private final double tinggiSisiTegakA, tinggiSisiTegakB, tinggiSisiTegakC;
+    private double volume;
+    private double luasPermukaan;
 
-public class LimasSegitiga extends BangunRuang {
-    private final Segitiga alas;
-    private final double tinggiLimas;       // Tinggi limas
-    private final double tinggiSisi;   // Tinggi sisi tegak segitiga
-
-    public LimasSegitiga(double alas, double tinggi, double tinggiLimas, double tinggiSisi) {
-        this.alas = new Segitiga(alas, tinggi);
+    public LimasSegitiga(double alas, double tinggi, double sisiA, double sisiB, double tinggiLimas, double tinggiSisiTegakA, double tinggiSisiTegakB, double tinggiSisiTegakC) {
+        super(alas, tinggi, sisiA, sisiB);
         this.tinggiLimas = tinggiLimas;
-        this.tinggiSisi = tinggiSisi;
+        this.tinggiSisiTegakA = tinggiSisiTegakA;
+        this.tinggiSisiTegakB = tinggiSisiTegakB;
+        this.tinggiSisiTegakC = tinggiSisiTegakC;
     }
 
-    @Override
-    public void hitungVolume() {
-        double volume = (1.0 / 3.0) * alas.getLuas() * tinggiLimas;
-        System.out.println("Volume Limas Segitiga: " + volume);
+    public double hitungVolume() {
+        volume = (1.0 / 3.0) * super.luas * tinggiLimas;
+        return volume;
     }
 
-    @Override
-    public void hitungLuasPermukaan() {
-        double luasAlas = alas.getLuas();
-        double luasSisiTegak = 3 * (0.5 * alas.getAlas() * tinggiSisi);
-        double luasPermukaan = luasAlas + luasSisiTegak;
-        System.out.println("Luas Permukaan Limas Segitiga: " + luasPermukaan);
+    public double hitungLuasPermukaan() {
+        double luasSisiA = 0.5 * super.sisiA * tinggiSisiTegakA;
+        double luasSisiB = 0.5 * super.sisiB * tinggiSisiTegakB;
+        double luasSisiAlas = 0.5 * super.alas  * tinggiSisiTegakC;
+        luasPermukaan = super.luas + luasSisiA + luasSisiB + luasSisiAlas;
+        return luasPermukaan;
     }
 }
