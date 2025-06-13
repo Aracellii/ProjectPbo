@@ -7,6 +7,8 @@ public class JuringLingkaran extends Lingkaran {
     public JuringLingkaran(double jari, double sudut) {
         super(jari);
         this.sudut = sudut;
+        this.luasJuring = hitungLuas();
+        this.kelilingJuring = hitungKeliling();
     }
       
     @Override

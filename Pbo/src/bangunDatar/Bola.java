@@ -1,29 +1,34 @@
 package bangunDatar;
 
 public class Bola extends Lingkaran {
+    protected double volume;
+    protected double luasPermukaan;
+
     public Bola(double jari) {
         super(jari);
+        this.volume = hitungVolume();
+        this.luasPermukaan= hitungLuasPermukaan();
     }
 
-    public void hitungVolume() {
-        double r = getJari();
-        double volume = (4.0 / 3.0) * Math.PI * Math.pow(r, 3);
-        System.out.println("Volume Bola: " + volume);
+    public double hitungVolume() {
+        volume = (4.0 / 3.0) * super.hitungLuas()*super.jari;
+        return volume;
+
+    }   
+
+    public double hitungLuasPermukaan() {
+        luasPermukaan = 4 * super.hitungLuas();
+        return luasPermukaan;
     }
 
-    public void hitungLuasPermukaan() {
-        double r = getJari();
-        double luas = 4 * Math.PI * r * r;
-        System.out.println("Luas Permukaan Bola: " + luas);
+    public double hitungVolume(double jariBaru) {
+        volume = (4.0 / 3.0) * Math.PI * Math.pow(jariBaru, 3);
+        return volume;
     }
 
-    public double getVolume() {
-        double r = getJari();
-        return (4.0 / 3.0) * Math.PI * Math.pow(r, 3);
+    public double hitungLuasPermukaan(double jariBaru){
+    luasPermukaan = 4 * Math.PI * Math.pow(jariBaru, 2);
+        return luasPermukaan;
     }
-
-    public double getLuasPermukaan() {
-        double r = getJari();
-        return 4 * Math.PI * r * r;
-    }
+        
 }

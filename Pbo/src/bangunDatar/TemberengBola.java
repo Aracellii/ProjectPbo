@@ -1,25 +1,26 @@
 package bangunDatar;
-import bangunDatar.Segitiga;
 
-public class TemberengBola extends BangunRuang {
-    private double jari;
-    private double tinggi;
+public class TemberengBola extends Lingkaran {
+    protected double tinggi;
+    protected double volume;
+    protected double luasPermukaan;
 
-    public TemberengBola(double jari, double tinggi) {
-        this.jari = jari;
+    public TemberengBola(double tinggi, double jari) {
+        super(jari);
         this.tinggi = tinggi;
+        this.volume = hitungVolume();
+        this.luasPermukaan = hitungLuasPermukaan();
+
     }
 
-    @Override
-    public void hitungVolume() {
-        double volume = (Math.PI * tinggi * tinggi * (3 * jari - tinggi)) / 3;
-        System.out.println("Volume Tembereng Bola: " + volume);
+    public double hitungVolume() {
+        volume = (Math.PI * tinggi * tinggi * (3 * jari - tinggi)) / 3;
+        return volume;
     }
 
-    @Override
-    public void hitungLuasPermukaan() {
-        double luas = 2 * Math.PI * jari * tinggi;
-        System.out.println("Luas Permukaan Tembereng Bola: " + luas);
+    public double hitungLuasPermukaan() {
+        luasPermukaan = 2 * Math.PI * jari * tinggi;
+        return luasPermukaan;
     }
 }
 

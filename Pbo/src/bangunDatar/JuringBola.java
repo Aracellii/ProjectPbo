@@ -1,26 +1,37 @@
 package bangunDatar;
-import bangunDatar.Lingkaran;
-
 public class JuringBola extends Bola {
-    private Lingkaran lingkaran;
-    private double sudut;
-
+    protected Lingkaran lingkaran;
+    protected double sudut;
+    protected double volumeJuring;
+    protected double luasPermukaanJuring;
     public JuringBola(double jari, double sudut) {
-        super(jari); // ✅ memanggil constructor Bola
-        this.lingkaran = new Lingkaran(jari);
+        super(jari); 
         this.sudut = sudut;
     }
-
     @Override
-    public void hitungVolume() {
-        double volume = (sudut / 360) * super.getVolume();
-        System.out.println("Volume Juring Bola: " + volume);
+    public double hitungVolume() {
+        volumeJuring = (sudut / 360) * super.hitungVolume();
+        return volumeJuring;
     }
 
     @Override
-    public void hitungLuasPermukaan() {
-        double r = lingkaran.getJari();
-        double luas = (sudut / 360) * super.getLuasPermukaan() + Math.PI * Math.pow(r,2);
-        System.out.println("Luas Permukaan Bola Padat : " + luas);
+    public double hitungLuasPermukaan() {
+        luasPermukaanJuring = (sudut / 360) * super.hitungLuasPermukaan()+ Math.PI * Math.pow(super.jari,2);
+        return luasPermukaanJuring;
     }
+
+    @Override
+    public double hitungVolume(double jariBaru){
+        volumeJuring = (sudut / 360.0) * Math.PI * ((4.0/3.0) * Math.pow(jariBaru, 3));
+        return volumeJuring;
+    }
+    
+    @Override
+    public double hitungLuasPermukaan(double jariBaru) {
+    double luasPermukaanBola = 4 * Math.PI * Math.pow(jariBaru, 2);
+    double luasLingkaranPenutup = Math.PI * Math.pow(jariBaru, 2);
+    luasPermukaanJuring = (sudut / 360.0) * luasPermukaanBola + luasLingkaranPenutup;
+    return luasPermukaanJuring;
+}
+
 }

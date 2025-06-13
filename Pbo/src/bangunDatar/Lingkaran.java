@@ -7,8 +7,10 @@
 
         public Lingkaran(double jari) {
             this.jari = jari;
-        }
-
+            this.keliling=hitungKeliling();
+            this.luas=hitungLuas();
+        }     
+        
         @Override
         public double  hitungLuas() {
            luas = Math.PI * jari * jari;
@@ -16,7 +18,7 @@
         }
 
         @Override
-        public double  hitungKeliling() {
+        public  double  hitungKeliling() {
             keliling = 2 * Math.PI * jari;
             return keliling;
         }
