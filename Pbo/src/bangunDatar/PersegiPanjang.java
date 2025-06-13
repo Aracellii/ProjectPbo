@@ -1,7 +1,6 @@
 package bangunDatar;
-import bangun.Bangun;
 
-public class PersegiPanjang extends BangunDatar implements Bangun {
+public class PersegiPanjang extends BangunDatar {
     protected double panjang;
     protected double lebar;
     protected double luas;
