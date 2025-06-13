@@ -1,19 +1,16 @@
 package bangunDatar;
-import bangun.*;
+
+import bangun.Bangun;
+
 public abstract class BangunDatar implements Bangun {
     protected double luas;
     protected double keliling;
-    public final static double phi = 3.14;
 
-    public abstract void hitungLuas(); //double
-    public abstract void hitungKeliling(); //double
+    public BangunDatar() {}
+
+    @Override
+    public abstract double hitungLuas();
     
-    public double getLuas() {
-        return luas;
-    }
-
-    public double getKeliling() {
-        return keliling;
-    }
-
+    @Override
+    public abstract double hitungKeliling();
 }
