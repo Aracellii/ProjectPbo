@@ -1,26 +1,30 @@
 package bangunDatar;
 
 public class BelahKetupat extends BangunDatar {
-    double diagonalA;
-    double diagonalB;
-    double sisi;
+    protected double diagonalA;
+    protected double diagonalB;
+    protected double sisi;
+    protected double keliling;
+    protected double luas;
 
-    public BelahKetupat(double diagonalA, double diagonalB,double sisi) {
+    public BelahKetupat(double diagonalA, double diagonalB, double sisi) {
 
         this.diagonalA = diagonalA;
         this.diagonalB = diagonalB;
         this.sisi = sisi;
+        this.keliling = hitungKeliling();
+        this.luas = hitungLuas();
     }
 
     @Override
-    public void hitungLuas() {
-        double luas = diagonalA*diagonalB/2;
-        System.out.println("Luas Belah Ketupat: " + luas);
+    public double hitungLuas() {
+        luas = diagonalA * diagonalB / 2;
+        return luas;
     }
 
     @Override
-    public void hitungKeliling() {
-        double keliling = sisi * 4;
-        System.out.println("Keliling Belah Ketupat: " + keliling);
+    public double hitungKeliling() {
+        keliling = sisi * 4;
+        return keliling;
     }
 }
