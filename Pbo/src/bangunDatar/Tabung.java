@@ -1,26 +1,24 @@
 package bangunDatar;
-import bangunDatar.Lingkaran;
 
-public class Tabung extends BangunRuang {
-    private Lingkaran lingkaran;
+public class Tabung extends Lingkaran {
     private double tinggi;
+    private double volume;
+    private double luasPermukaan;
 
     public Tabung(double jari, double tinggi) {
-        this.lingkaran = new Lingkaran(jari);
+        super(jari);
         this.tinggi = tinggi;
+        this.hitungVolume();
+        this.hitungLuasPermukaan();
     }
 
-    @Override
-    public void hitungVolume() {
-        double r = lingkaran.getJari();
-        double volume = Math.PI * r * r * tinggi;
-        System.out.println("Volume Tabung: " + volume);
+    public double hitungVolume() {
+        volume = super.luas * tinggi;
+        return volume;
     }
 
-    @Override
-    public void hitungLuasPermukaan() {
-        double r = lingkaran.getJari();
-        double luas = 2 * Math.PI * r * (r + tinggi);
-        System.out.println("Luas Permukaan Tabung: " + luas);
+    public double hitungLuasPermukaan() {
+        luas = 2 * super.luas + super.keliling * tinggi;
+        return luasPermukaan;
     }
 }
