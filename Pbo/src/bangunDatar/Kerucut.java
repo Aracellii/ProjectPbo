@@ -5,7 +5,7 @@ public class Kerucut extends Lingkaran {
     protected double volume;
     protected double luasPermukaan;
     
-    public Kerucut(double jari, double tinggi,double sisiMiring) {
+    public Kerucut(double jari, double tinggi) {
         super(jari);
         this.tinggi = tinggi;
         this.luasPermukaan = hitungLuasPermukaan();
