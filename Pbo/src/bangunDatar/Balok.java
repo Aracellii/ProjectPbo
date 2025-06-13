@@ -1,26 +1,22 @@
 package bangunDatar;
-import bangunDatar.PersegiPanjang;
-import bangun.Bangun;
 
-public class Balok extends BangunRuang implements Bangun {
-    protected final PersegiPanjang alas;
-    protected final double tinggi;
+public class Balok extends PersegiPanjang {
+    protected double tinggi;
     protected double volume;
     protected double LuasPermukaan;
 
     public Balok(double panjang, double lebar, double tinggi) {
-        this.alas = new PersegiPanjang(panjang, lebar);
-        this.tinggi = tinggi;
+        super(panjang, lebar);
     }
 
     @Override
-    public void hitungVolume() {
+    public double hitungVolume() {
         double volume = alas.getPanjang() * alas.getLebar() * tinggi;
         System.out.println("Volume Balok: " + volume);
     }
 
     @Override
-    public void hitungLuasPermukaan() {
+    public double hitungLuasPermukaan() {
         double p = alas.getPanjang();
         double l = alas.getLebar();
         double t = tinggi;
