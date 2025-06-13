@@ -2,14 +2,14 @@ package bangunDatar;
 
 public class KerucutTerpancung extends Kerucut {
     private double tinggiTerpancung;
-    private double jariTerpancung;
     private double volume;
     private double luasPermukaan;
+    private double jariTerpancung;
     
-    public KerucutTerpancung (double jari, double tinggi, double jariTerpancung, double tinggiTerpancung){
+    public KerucutTerpancung (double jari, double tinggi, double tinggiTerpancung){
         super(jari, tinggi);
-        this.jariTerpancung = jariTerpancung;
         this.tinggiTerpancung = tinggiTerpancung;
+        jariTerpancung = super.jari * ((super.tinggi - tinggiTerpancung)/super.tinggi);
     }
 
     public double hitungVolume (){
@@ -17,7 +17,7 @@ public class KerucutTerpancung extends Kerucut {
         return volume;
     }
     
-    public double hitungLuasPermukaan (){ 
+    public double hitungLuasPermukaan (){
         luasPermukaan = Math.PI * jariTerpancung * (jariTerpancung + Math.sqrt((jariTerpancung - super.jari)*(jariTerpancung - super.jari) + (tinggiTerpancung)*(tinggiTerpancung)));
         return luasPermukaan;
     }
