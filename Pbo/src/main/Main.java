@@ -19,6 +19,8 @@ public class Main {
         }
         
         double jariLingkaran = lingkaranRun.getJariLingkaran();
+        
+        
         BolaRun bolaRun = new BolaRun(scanner, jariLingkaran);
         Thread bolaThread = new Thread(bolaRun);
         bolaThread.start();
