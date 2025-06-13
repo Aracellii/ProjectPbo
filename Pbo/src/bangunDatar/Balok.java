@@ -25,13 +25,12 @@ public class Balok extends PersegiPanjang {
         return luasPermukaan;
     }
     
-    public double hitungVolume(double panjangBaru, double lebarBaru, double tinggiBaru){
-        
+    public double hitungVolume(double panjangBaru, double lebarBaru, double tinggiBaru){ //jika input panjang dan lebar baru
         volume = panjangBaru * lebarBaru * tinggiBaru;
         return volume;
     }
     
-     public double hitungLuasPermukaan(double panjangBaru, double lebarBaru, double tinggiBaru) {
+     public double hitungLuasPermukaan(double panjangBaru, double lebarBaru, double tinggiBaru) { //jika input panjang dan lebar baru
         luasPermukaan = 2 * ((panjangBaru * lebarBaru) + (panjangBaru * tinggiBaru) + (lebarBaru * tinggiBaru));
         return luasPermukaan;
     }
