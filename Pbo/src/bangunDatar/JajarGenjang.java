@@ -1,28 +1,31 @@
 package bangunDatar;
 
 public class JajarGenjang extends BangunDatar {
-    private double alas;
-    private double sisiMiring;
-    private double tinggi;
-    private double sisiKiri;
-
-
+    protected  double alas;
+    protected  double sisiMiring;
+    protected double tinggi;
+    protected double luas;
+    protected double keliling;
 
     public JajarGenjang(double alas, double sisiMiring, double tinggi) {
         this.alas = alas;
-        this.sisiKiri = sisiMiring;
+        this.sisiMiring = sisiMiring;
         this.tinggi = tinggi;
+        this.luas = hitungLuas();
+        this.keliling = hitungKeliling();
     }
 
     @Override
-    public void hitungLuas() {
-        double luas = alas * tinggi;
+    public double hitungLuas() {
+        luas = alas * tinggi;
         System.out.println("Luas Jajar Genjang: " + luas);
+        return luas;
     }
 
     @Override
-    public void hitungKeliling() {
-        double keliling = (alas + sisiMiring) * 2;
+    public double hitungKeliling() {
+        keliling = (alas + sisiMiring) * 2;
         System.out.println("Keliling Jajar Genjang: " + keliling);
+        return keliling;
     }
 }
