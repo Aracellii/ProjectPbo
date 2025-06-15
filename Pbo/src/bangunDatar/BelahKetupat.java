@@ -1,5 +1,7 @@
 package bangunDatar;
 
+import java.util.Scanner;
+
 public class BelahKetupat extends BangunDatar {
     protected double diagonalA;
     protected double diagonalB;
@@ -8,17 +10,16 @@ public class BelahKetupat extends BangunDatar {
     protected double luas;
 
     public BelahKetupat(double diagonalA, double diagonalB, double sisi) {
-
         this.diagonalA = diagonalA;
         this.diagonalB = diagonalB;
         this.sisi = sisi;
-        this.keliling = hitungKeliling();
         this.luas = hitungLuas();
+        this.keliling = hitungKeliling();
     }
 
     @Override
     public double hitungLuas() {
-        luas = diagonalA * diagonalB / 2;
+        luas = (diagonalA * diagonalB) / 2;
         return luas;
     }
 
@@ -28,43 +29,30 @@ public class BelahKetupat extends BangunDatar {
         return keliling;
     }
 
-    public void prosesInputDanValidasi() {
-        java.util.Scanner inp = new java.util.Scanner(System.in);
-        while (true) {
-            System.out.print("\nApakah ingin mengubah nilai diagonal A, diagonal B, dan sisi belah ketupat? (Y/N): ");
-            String jawab = inp.nextLine();
+    public static class BelahKetupatRunnable implements Runnable {
+        private BelahKetupat belahKetupat;
 
-            if (jawab.equalsIgnoreCase("Y")) {
-                while (true) {
-                    try {
-                        System.out.print("Masukkan diagonal A baru: ");
-                        this.diagonalA = inp.nextDouble();
-                        System.out.print("Masukkan diagonal B baru: ");
-                        this.diagonalB = inp.nextDouble();
-                        System.out.print("Masukkan sisi baru: ");
-                        this.sisi = inp.nextDouble();
-                        inp.nextLine(); // Buang newline
+        @Override
+        public void run() {
+            Scanner scanner = new Scanner(System.in);
 
-                        if (this.diagonalA <= 0 || this.diagonalB <= 0 || this.sisi <= 0) {
-                            System.out.println("Nilai harus lebih dari nol.\n");
-                            continue;
-                        }
+            System.out.print("Masukkan diagonal A belah ketupat: ");
+            double diagonalA = scanner.nextDouble();
 
-                        // Hitung dan tampilkan
-                        System.out.printf("\nLuas Belah Ketupat: %.2f\n", hitungLuas());
-                        System.out.printf("Keliling Belah Ketupat: %.2f\n", hitungKeliling());
-                        break;
+            System.out.print("Masukkan diagonal B belah ketupat: ");
+            double diagonalB = scanner.nextDouble();
 
-                    } catch (java.util.InputMismatchException e) {
-                        System.out.println("Input tidak valid. Silakan masukkan angka yang benar.");
-                        inp.nextLine(); // Clear invalid input
-                    }
-                }
-            } else if (jawab.equalsIgnoreCase("N")) {
-                break;
-            } else {
-                System.out.println("Pilihan tidak valid. Silakan masukkan Y atau N.");
-            }
+            System.out.print("Masukkan sisi belah ketupat: ");
+            double sisi = scanner.nextDouble();
+
+            belahKetupat = new BelahKetupat(diagonalA, diagonalB, sisi);
+
+            System.out.println("Luas belah ketupat: " + belahKetupat.hitungLuas());
+            System.out.println("Keliling belah ketupat: " + belahKetupat.hitungKeliling());
+        }
+
+        public BelahKetupat getBelahKetupat() {
+            return belahKetupat;
         }
     }
 }
