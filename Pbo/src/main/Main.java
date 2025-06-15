@@ -16,10 +16,8 @@ public class Main {
             lingkaranThread.join(); // tunggu selesai
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
-        
+        }   
         double jariLingkaran = lingkaranRun.getJariLingkaran();
-        
         
         BolaRun bolaRun = new BolaRun(scanner, jariLingkaran);
         Thread bolaThread = new Thread(bolaRun);

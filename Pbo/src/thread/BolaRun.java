@@ -1,10 +1,11 @@
 package thread;
+
 import bangunDatar.Bola;
 import java.util.Scanner;
 
 public class BolaRun implements Runnable {
-    private Scanner input;
-    private double jariLingkaran;
+    private final Scanner input;
+    private final double jariLingkaran;
 
     public BolaRun(Scanner input, double jariLingkaran) {
         this.input = input;
@@ -13,60 +14,48 @@ public class BolaRun implements Runnable {
 
     @Override
     public void run() {
-        double jariBola = 0;
-        boolean pakaiLingkaran = false;
+        double jariBola; // Satu variabel untuk menampung jari-jari yang akan dipakai
 
-        System.out.print("Gunakan jari-jari lingkaran (" + jariLingkaran + ") untuk bola? (ya/tidak): ");
+        System.out.print("Gunakan jari-jari lingkaran (" + this.jariLingkaran + ") untuk bola? (ya/tidak): ");
         String pilihan = input.nextLine().trim().toLowerCase();
 
+        // 1. Tentukan nilai jariUntukBola terlebih dahulu
         if (pilihan.equals("ya")) {
-            jariBola = jariLingkaran;
-            pakaiLingkaran = true;
+            jariBola = this.jariLingkaran;
         } else if (pilihan.equals("tidak")) {
             System.out.print("Masukkan jari-jari baru untuk bola: ");
             while (true) {
-                String line = input.nextLine();
                 try {
-                    jariBola = Double.parseDouble(line);
-                    break;
+                    jariBola = Double.parseDouble(input.nextLine());
+                    break; // Keluar dari loop jika input valid
                 } catch (NumberFormatException e) {
-                    System.out.print("Input tidak valid, masukkan angka untuk jari-jari: ");
+                    System.out.print("Input tidak valid. Masukkan angka untuk jari-jari: ");
                 }
             }
         } else {
             System.out.println("Input salah. Hanya menerima 'ya' atau 'tidak'.");
-            return;
+            return; // Hentikan eksekusi jika input tidak valid
         }
 
-        // Buat objek Bola dengan jariBola (baik dari lingkaran maupun baru)
-        Bola bola = new Bola(jariLingkaran); // tetap buat dengan jari lingkaran karena pewarisan
+        // 2. Buat objek Bola HANYA SEKALI dengan jari-jari yang sudah ditentukan
+        Bola bola = new Bola(jariBola);
 
         System.out.print("Hitung apa? (volume/luas/keduanya): ");
         String tugas = input.nextLine().trim().toLowerCase();
 
+        // 3. Logika switch menjadi jauh lebih sederhana
+        // Tidak perlu if-else lagi, karena objek 'bola' sudah benar
         switch (tugas) {
             case "volume":
-                if (pakaiLingkaran) {
-                    System.out.println("Volume bola dengan jari-jari " + jariBola + ": " + bola.hitungVolume());
-                } else {
-                    System.out.println("Volume bola dengan jari-jari " + jariBola + ": " + bola.hitungVolume(jariBola));
-                }
+                System.out.println("Volume bola dengan jari-jari " + jariBola + ": " + bola.hitungVolume());
                 break;
             case "luas":
-                if (pakaiLingkaran) {
-                    System.out.println("Luas permukaan bola dengan jari-jari " + jariBola + ": " + bola.hitungLuasPermukaan());
-                } else {
-                    System.out.println("Luas permukaan bola dengan jari-jari " + jariBola + ": " + bola.hitungLuasPermukaan(jariBola));
-                }
+                System.out.println("Luas permukaan bola dengan jari-jari " + jariBola + ": " + bola.hitungLuasPermukaan());
                 break;
             case "keduanya":
-                if (pakaiLingkaran) {
-                    System.out.println("Volume bola dengan jari-jari " + jariBola + ": " + bola.hitungVolume());
-                    System.out.println("Luas permukaan bola dengan jari-jari " + jariBola + ": " + bola.hitungLuasPermukaan());
-                } else {
-                    System.out.println("Volume bola dengan jari-jari " + jariBola + ": " + bola.hitungVolume(jariBola));
-                    System.out.println("Luas permukaan bola dengan jari-jari " + jariBola + ": " + bola.hitungLuasPermukaan(jariBola));
-                }
+                // Memanggil metode tanpa parameter karena objek sudah memiliki jari-jari yang benar
+                System.out.println("Volume bola dengan jari-jari " + jariBola + ": " + bola.hitungVolume());
+                System.out.println("Luas permukaan bola dengan jari-jari " + jariBola + ": " + bola.hitungLuasPermukaan());
                 break;
             default:
                 System.out.println("Tugas tidak dikenali. Gunakan: volume, luas, atau keduanya.");
