@@ -1,5 +1,7 @@
 package bangunDatar;
 
+import java.util.Scanner;
+
 public class TemberengLingkaran extends Lingkaran {
     private final double sudut;
   
@@ -46,6 +48,30 @@ public class TemberengLingkaran extends Lingkaran {
         double taliBusur = 2 * jariJariBaru * Math.sin(sudutRadian / 2);
         kelilingTembereng= panjangBusur + taliBusur;
         return kelilingTembereng;
+    }
+    
+    public static class TemberengLingkaranRunnable implements Runnable {
+        private TemberengLingkaran tembereng;
+
+        @Override
+        public void run() {
+            Scanner scanner = new java.util.Scanner(System.in);
+
+            System.out.print("Masukkan jari-jari tembereng lingkaran: ");
+            double jari = scanner.nextDouble();
+
+            System.out.print("Masukkan besar sudut tembereng (derajat): ");
+            double sudut = scanner.nextDouble();
+
+            tembereng = new TemberengLingkaran(jari, sudut);
+
+            System.out.println("Luas tembereng: " + tembereng.hitungLuas());   
+            System.out.println("Keliling tembereng: " + tembereng.hitungKeliling());   
+        }
+
+        public TemberengLingkaran getTemberengLingkaran() {
+            return tembereng;
+        }
     }
 
 }

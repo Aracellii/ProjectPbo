@@ -24,7 +24,7 @@ public class Main {
             System.out.println("12. Prisma Segitiga");
             System.out.println("13. Limas Segitiga");
             System.out.println("14. Prisma Persegi(Kubus)");
-            System.out.println("15. Limas Persegi");
+            System.out.println("15. Limas Persegi Panjang");
             System.out.println("16. Prisma Persegi Panjang(Balok)");
             System.out.println("17. Limas Jajar Genjang");
             System.out.println("18. Prisma Jajar Genjang");
@@ -40,6 +40,8 @@ public class Main {
             System.out.println("28. Tembereng Bola");
             System.out.println("29. Cincin Bola");
             System.out.println("30. Tabung");
+            System.out.println("31. Limas Persegi Panjang");
+            
 
 
 
