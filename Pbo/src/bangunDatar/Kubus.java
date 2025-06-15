@@ -3,17 +3,20 @@ package bangunDatar;
 import java.util.Scanner;
 
 public class Kubus extends Persegi  {  
+    private double volume;
+    private double luasPermukaan;
+    
     public Kubus(double sisi) {
         super(sisi);
     }
     
-    public void hitungVolume() {
-        double volume = sisi * sisi * sisi;
-        System.out.println("Luas Kubus: " + volume);
+    public double hitungVolume() {
+        volume = super.luas * sisi;
+        return volume;
     }
-    public void hitungLuasPermukaan() {
-        double luas = 6 * sisi * sisi;
-        System.out.println("Luas Permukaan Kubus: " + luas);
+    public double hitungLuasPermukaan() {
+        luasPermukaan = 6 * super.luas;
+        return luasPermukaan;
     }
     
     public static class KubusRunnable implements Runnable { 
@@ -27,8 +30,8 @@ public class Kubus extends Persegi  {
 
             kubus = new Kubus(sisi);
 
-            System.out.println("Luas persegi: " + kubus.hitungLuas());
-            System.out.println("Keliling persegi: " + kubus.hitungKeliling());
+            System.out.println("Luas persegi: " + kubus.hitungVolume());
+            System.out.println("Keliling persegi: " + kubus.hitungLuasPermukaan());
         }
 
         public Kubus getKubus() {
