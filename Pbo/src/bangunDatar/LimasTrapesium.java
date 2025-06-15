@@ -29,8 +29,8 @@ public class LimasTrapesium extends Trapesium {
         double tinggiSegitigaAtas = Math.sqrt(Math.pow((tinggi/2),2)+ Math.pow(tinggiLimas,2));
         double tinggiSegitigaBawah = tinggiSegitigaAtas;
         
-        double tinggiSlankMiring = Math.sqrt(Math.pow(tinggiSegitigaAtas,2)+ Math.pow((sisiBawah/2),2));
-        double tinggiSegitigaMiring = Math.sqrt(Math.pow(tinggiSlankMiring,2) - Math.pow((sisiMiring/2),2));
+        double tinggiSlantMiring = Math.sqrt(Math.pow(tinggiSegitigaAtas,2)+ Math.pow((sisiBawah/2),2));
+        double tinggiSegitigaMiring = Math.sqrt(Math.pow(tinggiSlantMiring,2) - Math.pow((sisiMiring/2),2));
         
         double luasSegitigaMiring = sisiMiring * tinggiSegitigaMiring / 2;
         double luasSegitigaAtas = tinggiSegitigaAtas * sisiAtas /2;

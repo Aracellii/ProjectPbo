@@ -7,7 +7,7 @@ public class JajarGenjang extends BangunDatar {
     protected double luas;
     protected double keliling;
 
-    public JajarGenjang(double alas, double sisiMiring, double tinggi, double luas, double keliling) {
+    public JajarGenjang(double alas, double sisiMiring, double tinggi) {
         this.alas = alas;
         this.sisiMiring = sisiMiring;
         this.tinggi = tinggi;
