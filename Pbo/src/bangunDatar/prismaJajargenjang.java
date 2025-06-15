@@ -1,10 +1,10 @@
 package bangunDatar;
 
-public class prismaJajargenjang extends JajarGenjang{
+public class PrismaJajargenjang extends JajarGenjang{
     protected double tinggiPrisma;
         
-    public prismaJajargenjang(double alas, double sisiMiring, double tinggi, double luas, double keliling, double tinggiPrisma) {
-        super(alas, sisiMiring, tinggi, luas, keliling);
+    public PrismaJajargenjang(double alas, double sisiMiring, double tinggi, double tinggiPrisma) {
+        super(alas, sisiMiring, tinggi);
         this.tinggiPrisma = tinggiPrisma;
     }
     
