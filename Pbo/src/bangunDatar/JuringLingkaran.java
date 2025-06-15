@@ -1,5 +1,7 @@
 package bangunDatar;
 
+import java.util.Scanner;
+
 public class JuringLingkaran extends Lingkaran {
     protected double sudut;
     protected double luasJuring;
@@ -31,5 +33,27 @@ public class JuringLingkaran extends Lingkaran {
     public double hitungKeliling(double jariJariBaru, double sudutJuringBaru) {
         kelilingJuring = (sudutJuringBaru / 360.0) * (2 * Math.PI * jariJariBaru) + 2 * jariJariBaru;
         return kelilingJuring;
+    }
+    
+    public static class JuringLingkaranRunnable implements Runnable {
+        private JuringLingkaran juringLingkaran;
+
+        @Override
+        public void run() {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Masukkan jari-jari lingkaran: ");
+            double jari = scanner.nextDouble();
+            System.out.print("Masukkan sudut juring (derajat): ");
+            double sudut = scanner.nextDouble();
+
+            juringLingkaran = new JuringLingkaran(jari, sudut);
+
+            System.out.println("Keliling juring lingkaran: " + juringLingkaran.hitungKeliling());
+            System.out.println("Luas juring lingkaran: " + juringLingkaran.hitungLuas());
+        }
+
+        public JuringLingkaran getJuringLingkaran() {
+            return juringLingkaran;
+        }
     }
 }
