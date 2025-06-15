@@ -21,6 +21,29 @@ public class Main {
             System.out.println("9. Bola");
             System.out.println("10. Kerucut");
             System.out.println("11. Limas Belah Ketupat");
+            System.out.println("12. Limas Belah Ketupat");
+            System.out.println("13. Limas Belah Ketupat");
+            System.out.println("14. Limas Belah Ketupat");
+            System.out.println("15. Limas Belah Ketupat");
+            System.out.println("16. Limas Belah Ketupat");
+            System.out.println("17. Limas Belah Ketupat");
+            System.out.println("18. Limas Belah Ketupat");
+            System.out.println("19. Limas Belah Ketupat");
+            System.out.println("20. Limas Belah Ketupat");
+            System.out.println("21. Limas Belah Ketupat");
+            System.out.println("22. Limas Belah Ketupat");
+            System.out.println("23. Limas Belah Ketupat");
+            System.out.println("24. Limas Belah Ketupat");
+            System.out.println("25. Limas Belah Ketupat");
+            System.out.println("26. Limas Belah Ketupat");
+            System.out.println("27. Limas Belah Ketupat");
+            System.out.println("28. Limas Belah Ketupat");
+            System.out.println("29. Limas Belah Ketupat");
+            System.out.println("30. Limas Belah Ketupat");
+            System.out.println("31. Limas Belah Ketupat");
+            System.out.println("32. Limas Belah Ketupat");
+            System.out.println("33. Limas Belah Ketupat");
+            System.out.println("34. Limas Belah Ketupat");
 
 
 

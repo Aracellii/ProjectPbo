@@ -4,6 +4,8 @@
  */
 package bangunDatar;
 
+import java.util.Scanner;
+
 /**
  *
  * @author L E N O V O
@@ -52,5 +54,36 @@ public class LimasJajarGenjang extends JajarGenjang {
         
         luasPermukaan = luasAlasLimas + luasSegitigaPanjang + luasSegitigaMiring;
         return luasPermukaan;
+    }
+        public static class LimasJajarGenjangRunnable implements Runnable {
+        private LimasJajarGenjang limas;
+
+        @Override
+        public void run() {
+            Scanner scanner = new java.util.Scanner(System.in);
+
+            System.out.print("Masukkan alas jajar genjang: ");
+            double alas = scanner.nextDouble();
+
+            System.out.print("Masukkan sisi miring jajar genjang: ");
+            double sisiMiring = scanner.nextDouble();
+
+            System.out.print("Masukkan tinggi jajar genjang: ");
+            double tinggi = scanner.nextDouble();
+
+            System.out.print("Masukkan tinggi limas: ");
+            double tinggiLimas = scanner.nextDouble();
+
+            limas = new LimasJajarGenjang(alas, sisiMiring, tinggi, tinggiLimas);
+
+            System.out.println("Luas alas jajar genjang: " + limas.hitungLuas());  
+            System.out.println("Keliling alas jajar genjang: " + limas.hitungKeliling());   
+            System.out.println("Volume limas: " + limas.hitungVolume());   
+            System.out.println("Luas permukaan limas: " + limas.hitungLuasPermukaan());   
+        }
+
+        public LimasJajarGenjang getLimasJajarGenjang() {
+            return limas;
+        }
     }
 }
