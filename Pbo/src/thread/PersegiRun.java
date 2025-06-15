@@ -3,7 +3,7 @@ package thread;
 import bangunDatar.Persegi;
 import java.util.Scanner;
 
-public class PersegiRun implements Runnable {
+public class PersegiRun extends Thread {
     private Scanner input;
     private double sisi = 0;
     private Persegi persegi;
