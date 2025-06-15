@@ -1,7 +1,8 @@
 package bangunDatar;
-import bangunDatar.Persegi;
-public class Kubus extends Persegi  {
-    
+
+import java.util.Scanner;
+
+public class Kubus extends Persegi  {  
     public Kubus(double sisi) {
         super(sisi);
     }
@@ -13,5 +14,25 @@ public class Kubus extends Persegi  {
     public void hitungLuasPermukaan() {
         double luas = 6 * sisi * sisi;
         System.out.println("Luas Permukaan Kubus: " + luas);
+    }
+    
+    public static class KubusRunnable implements Runnable { 
+        private Kubus kubus;
+         
+        @Override
+        public void run() {
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Masukkan sisi kubus: ");
+            double sisi = scanner.nextDouble();
+
+            kubus = new Kubus(sisi);
+
+            System.out.println("Luas persegi: " + kubus.hitungLuas());
+            System.out.println("Keliling persegi: " + kubus.hitungKeliling());
+        }
+
+        public Kubus getKubus() {
+            return kubus;
+        }
     }
 }
