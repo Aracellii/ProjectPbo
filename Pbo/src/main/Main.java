@@ -10,40 +10,36 @@ public class Main {
 
         while (jalan) {
             System.out.println("\n=== Menu Bangun Datar ===");
-            System.out.println("1. Persegi");
-            System.out.println("2. Lingkaran");
-            System.out.println("3. Segitiga");
+            System.out.println("1. Segitiga");
+            System.out.println("2. Persegi");
+            System.out.println("3. Persegi Panjang");
             System.out.println("4. Jajar Genjang");
-            System.out.println("5. Persegi Panjang");
+            System.out.println("5. Layang-Layang");
             System.out.println("6. Trapesium");
-            System.out.println("7. Layang-Layang");
-            System.out.println("8. Belah Ketupat");
+            System.out.println("7. Belah-Ketupat");
+            System.out.println("8. Lingkaran");
             System.out.println("9. Bola");
             System.out.println("10. Kerucut");
-            System.out.println("11. Limas Belah Ketupat");
-            System.out.println("12. Limas Belah Ketupat");
-            System.out.println("13. Limas Belah Ketupat");
-            System.out.println("14. Limas Belah Ketupat");
-            System.out.println("15. Limas Belah Ketupat");
-            System.out.println("16. Limas Belah Ketupat");
-            System.out.println("17. Limas Belah Ketupat");
-            System.out.println("18. Limas Belah Ketupat");
-            System.out.println("19. Limas Belah Ketupat");
-            System.out.println("20. Limas Belah Ketupat");
-            System.out.println("21. Limas Belah Ketupat");
-            System.out.println("22. Limas Belah Ketupat");
-            System.out.println("23. Limas Belah Ketupat");
-            System.out.println("24. Limas Belah Ketupat");
-            System.out.println("25. Limas Belah Ketupat");
-            System.out.println("26. Limas Belah Ketupat");
-            System.out.println("27. Limas Belah Ketupat");
-            System.out.println("28. Limas Belah Ketupat");
-            System.out.println("29. Limas Belah Ketupat");
-            System.out.println("30. Limas Belah Ketupat");
-            System.out.println("31. Limas Belah Ketupat");
-            System.out.println("32. Limas Belah Ketupat");
-            System.out.println("33. Limas Belah Ketupat");
-            System.out.println("34. Limas Belah Ketupat");
+            System.out.println("11. Kerucut Terpancung");
+            System.out.println("12. Prisma Segitiga");
+            System.out.println("13. Limas Segitiga");
+            System.out.println("14. Prisma Persegi(Kubus)");
+            System.out.println("15. Limas Persegi");
+            System.out.println("16. Prisma Persegi Panjang(Balok)");
+            System.out.println("17. Limas Jajar Genjang");
+            System.out.println("18. Prisma Jajar Genjang");
+            System.out.println("19. Limas Layang-Layang");
+            System.out.println("20. Prisma Layang-Layang");
+            System.out.println("21. Limas Trapesium");
+            System.out.println("22. Prisma trapesium");
+            System.out.println("23. Limas Belah-Ketupat");
+            System.out.println("24. Prisma Belah-Ketupat");
+            System.out.println("25. Juring Lingkaran");
+            System.out.println("26. Tembereng Lingkaran");
+            System.out.println("27. Juring Bola");
+            System.out.println("28. Tembereng Bola");
+            System.out.println("29. Cincin Bola");
+            System.out.println("30. Tabung");
 
 
 
@@ -87,6 +83,78 @@ public class Main {
                  case 11:
                     thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
                     break;
+                case 12:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 13:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 14:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 15:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 16:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 17:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 18:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break; 
+                case 19:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 20:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 21:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 22:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 23:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 24:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 25:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 26:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;    
+                case 27:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;    
+                case 28:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 29:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;    
+                case 30:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;    
+                case 31:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;    
+                case 32:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;    
+                case 33:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;
+                case 34:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+                    break;   
+                    
+                    
+                    
                 case 0:
                     jalan = false;
                     System.out.println("Terima kasih! Program selesai.");

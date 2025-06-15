@@ -47,8 +47,8 @@ public class PrismaLayangLayang extends LayangLayang {
 
             prismaLayangLayang = new PrismaLayangLayang(diagonalA, diagonalB, sisiPendek, sisiPanjang, tinggiPrisma);
 
-            prismaLayangLayang.hitungVolume();
-            prismaLayangLayang.hitungLuasPermukaan();
+            System.out.println("Volume prisma layang-layang: " + prismaLayangLayang.hitungVolume());
+            System.out.println("Luas Permukaan prisma layang-layang: " + prismaLayangLayang.hitungLuasPermukaan());
         }
 
         public PrismaLayangLayang getPrismaLayangLayang() {

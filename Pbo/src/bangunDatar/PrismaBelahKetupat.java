@@ -44,8 +44,8 @@ public class PrismaBelahKetupat extends BelahKetupat {
 
             prismaBelahKetupat = new PrismaBelahKetupat(diagonalA, diagonalB, sisi, tinggiPrisma);
 
-            System.out.println("Luas belah ketupat: " + prismaBelahKetupat.hitungVolume());
-            System.out.println("Keliling belah ketupat: " + prismaBelahKetupat.hitungLuasPermukaan());
+            System.out.println("Volume prisma belah ketupat: " + prismaBelahKetupat.hitungVolume());
+            System.out.println("Luas Permukaan prisma belah ketupat: " + prismaBelahKetupat.hitungLuasPermukaan());
         }
 
         public PrismaBelahKetupat getPrismaBelahKetupat() {
