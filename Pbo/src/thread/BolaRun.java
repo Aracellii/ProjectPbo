@@ -14,37 +14,56 @@ public class BolaRun implements Runnable {
 
     @Override
     public void run() {
-        double jariBola; // Satu variabel untuk menampung jari-jari yang akan dipakai
+        double jariBola = 0;
 
-        System.out.print("Gunakan jari-jari lingkaran (" + this.jariLingkaran + ") untuk bola? (ya/tidak): ");
-        String pilihan = input.nextLine().trim().toLowerCase();
+        // Validasi input pilihan ya/tidak
+        while (true) {
+            System.out.print("Gunakan jari-jari lingkaran (" + this.jariLingkaran + ") untuk bola? (ya/tidak): ");
+            String pilihan = input.nextLine().trim().toLowerCase();
 
-        // 1. Tentukan nilai jariUntukBola terlebih dahulu
-        if (pilihan.equals("ya")) {
-            jariBola = this.jariLingkaran;
-        } else if (pilihan.equals("tidak")) {
-            System.out.print("Masukkan jari-jari baru untuk bola: ");
-            while (true) {
-                try {
-                    jariBola = Double.parseDouble(input.nextLine());
-                    break; // Keluar dari loop jika input valid
-                } catch (NumberFormatException e) {
-                    System.out.print("Input tidak valid. Masukkan angka untuk jari-jari: ");
+            if (pilihan.equals("ya")) {
+                jariBola = this.jariLingkaran;
+                break;
+            } else if (pilihan.equals("tidak")) {
+                // Input jari-jari baru dengan validasi angka > 0
+                while (true) {
+                    System.out.print("Masukkan jari-jari baru untuk bola : ");
+                    String line = input.nextLine();
+
+                    try {
+                        double nilai = Double.parseDouble(line);
+                        if (nilai > 0) {
+                            jariBola = nilai;
+                            break;
+                        } else {
+                            System.out.println("Jari-jari harus lebih dari 0.");
+                        }
+                    } catch (NumberFormatException e) {
+                        System.out.println("Input tidak valid, masukkan angka.");
+                    }
                 }
+                break; // keluar loop outer setelah dapat jariBola valid
+            } else {
+                System.out.println("Input salah. Hanya menerima 'ya' atau 'tidak'.");
             }
-        } else {
-            System.out.println("Input salah. Hanya menerima 'ya' atau 'tidak'.");
-            return; // Hentikan eksekusi jika input tidak valid
         }
 
-        // 2. Buat objek Bola HANYA SEKALI dengan jari-jari yang sudah ditentukan
         Bola bola = new Bola(jariBola);
 
-        System.out.print("Hitung apa? (volume/luas/keduanya): ");
-        String tugas = input.nextLine().trim().toLowerCase();
+        // Validasi input tugas
+        String tugas;
+        while (true) {
+            System.out.print("Hitung apa? (volume/luas/keduanya): ");
+            tugas = input.nextLine().trim().toLowerCase();
 
-        // 3. Logika switch menjadi jauh lebih sederhana
-        // Tidak perlu if-else lagi, karena objek 'bola' sudah benar
+            if (tugas.equals("volume") || tugas.equals("luas") || tugas.equals("keduanya")) {
+                break;
+            } else {
+                System.out.println("Tugas tidak dikenali. Gunakan: volume, luas, atau keduanya.");
+            }
+        }
+
+        // Tampilkan hasil sesuai tugas
         switch (tugas) {
             case "volume":
                 System.out.println("Volume bola dengan jari-jari " + jariBola + ": " + bola.hitungVolume());
@@ -53,12 +72,9 @@ public class BolaRun implements Runnable {
                 System.out.println("Luas permukaan bola dengan jari-jari " + jariBola + ": " + bola.hitungLuasPermukaan());
                 break;
             case "keduanya":
-                // Memanggil metode tanpa parameter karena objek sudah memiliki jari-jari yang benar
                 System.out.println("Volume bola dengan jari-jari " + jariBola + ": " + bola.hitungVolume());
                 System.out.println("Luas permukaan bola dengan jari-jari " + jariBola + ": " + bola.hitungLuasPermukaan());
                 break;
-            default:
-                System.out.println("Tugas tidak dikenali. Gunakan: volume, luas, atau keduanya.");
         }
     }
 }

@@ -1,14 +1,25 @@
 package bangunDatar;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+public class CincinBola extends Lingkaran {
+    protected double tinggi;
+    protected double luasPermukaan;
+    protected double volume;
 
-/**
- *
- * @author L E N O V O
- */
-public class CincinBola {
-    
+    public CincinBola(double jari, double tinggi) {
+        super(jari);
+        this.tinggi = tinggi;
+        this.luasPermukaan = hitungLuasPermukaan();
+        this.volume = hitungVolume();
+    }
+
+    public double hitungLuasPermukaan() {
+        luasPermukaan = 2 * Math.PI * jari * tinggi;
+        return luasPermukaan;
+    }
+
+    public double hitungVolume() {
+        volume = (Math.PI * tinggi * tinggi * (3 * jari - tinggi)) / 3;
+        return volume;
+    }
 }
+
