@@ -46,8 +46,8 @@ public class PrismaTrapesium extends Trapesium {
 
             prismaTrapesium = new PrismaTrapesium (sisiAtas, sisiBawah, sisiMiring, tinggi, tinggiPrisma);
 
-            System.out.println("Luas trapesium: " + prismaTrapesium.hitungLuas());
-            System.out.println("Keliling trapesium: " + prismaTrapesium.hitungKeliling());
+            System.out.println("Volume prisma trapesium: " + prismaTrapesium.hitungVolume());
+            System.out.println("Luas permukaan prisma trapesium: " + prismaTrapesium.hitungLuasPermukaan());
         }
 
         public PrismaTrapesium getPrismaTrapesium() {

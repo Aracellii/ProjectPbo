@@ -65,8 +65,8 @@ public class TemberengLingkaran extends Lingkaran {
 
             tembereng = new TemberengLingkaran(jari, sudut);
 
-            System.out.println("Luas tembereng: " + tembereng.hitungLuas());   
-            System.out.println("Keliling tembereng: " + tembereng.hitungKeliling());   
+            System.out.println("Luas tembereng lingkaran: " + tembereng.hitungLuas());   
+            System.out.println("Keliling tembereng lingkaran: " + tembereng.hitungKeliling());   
         }
 
         public TemberengLingkaran getTemberengLingkaran() {
