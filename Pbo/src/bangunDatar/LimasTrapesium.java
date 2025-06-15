@@ -4,6 +4,8 @@
  */
 package bangunDatar;
 
+import java.util.Scanner;
+
 /**
  *
  * @author L E N O V O
@@ -61,4 +63,41 @@ public class LimasTrapesium extends Trapesium {
         luasPermukaan = luasPermukaan = luasAlasLimas + luasSegitigaMiring * 2 + luasSegitigaAtas + luasSegitigaBawah;
         return luasPermukaan;
     }
+    
+        public static class LimasTrapesiumRunnable implements Runnable {
+        private LimasTrapesium limas;
+
+        @Override
+        public void run() {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Masukkan sisi atas trapesium: ");
+            double sisiAtas = scanner.nextDouble();
+
+            System.out.print("Masukkan sisi bawah trapesium: ");
+            double sisiBawah = scanner.nextDouble();
+
+            System.out.print("Masukkan sisi miring trapesium: ");
+            double sisiMiring = scanner.nextDouble();
+
+            System.out.print("Masukkan tinggi trapesium: ");
+            double tinggi = scanner.nextDouble();
+
+            System.out.print("Masukkan tinggi limas: ");
+            double tinggiLimas = scanner.nextDouble();
+
+            limas = new LimasTrapesium(sisiAtas, sisiBawah, sisiMiring, tinggi, tinggiLimas);
+
+            System.out.println("Luas alas trapesium: " + limas.hitungLuas());  
+            System.out.println("Keliling alas trapesium: " + limas.hitungKeliling());   
+            System.out.println("Volume limas: " + limas.hitungVolume());   
+            System.out.println("Luas permukaan limas: " + limas.hitungLuasPermukaan());   
+        }
+
+        public LimasTrapesium getLimasTrapesium() {
+            return limas;
+        }
+    }
 }
+
+
