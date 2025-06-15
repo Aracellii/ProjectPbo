@@ -51,119 +51,48 @@ public class Main {
 
             Thread thread;
 
-            switch (pilihan) {
-                case 1:
-                    thread = new Thread(new Persegi.PersegiRunnable());
-                    break;
-                case 2:
-                    thread = new Thread(new Lingkaran.LingkaranRunnable());
-                    break;
-                case 3:
-                     thread = new Thread(new Segitiga.SegitigaRunnable());
-                     break;
-                case 4:
-                     thread = new Thread(new JajarGenjang.JajarGenjangRunnable());
-                     break;
-                case 5:
-                    thread = new Thread(new PersegiPanjang.PersegiPanjangRunnable());
-                    break;
-                case 6:
-                    thread = new Thread(new Trapesium.TrapesiumRunnable());
-                    break;
-                case 7:
-                    thread = new Thread(new LayangLayang.LayangLayangRunnable());
-                    break;
-                case 8:
-                    thread = new Thread(new BelahKetupat.BelahKetupatRunnable());
-                    break;
-                case 9:
-                    thread = new Thread(new Bola.BolaRunnable());
-                    break;
-                 case 10:
-                    thread = new Thread(new Kerucut.KerucutRunnable());
-                    break;
-                 case 11:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 12:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 13:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 14:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 15:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 16:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 17:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 18:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break; 
-                case 19:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 20:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 21:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 22:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 23:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 24:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 25:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 26:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;    
-                case 27:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;    
-                case 28:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 29:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;    
-                case 30:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;    
-                case 31:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;    
-                case 32:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;    
-                case 33:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;
-                case 34:
-                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
-                    break;   
-                    
-                    
-                    
-                case 0:
+            switch (pilihan) { 
+            case 1 -> thread = new Thread(new Segitiga.SegitigaRunnable());
+            case 2 -> thread = new Thread(new Persegi.PersegiRunnable());
+            case 3 -> thread = new Thread(new PersegiPanjang.PersegiPanjangRunnable());
+            case 4 -> thread = new Thread(new JajarGenjang.JajarGenjangRunnable());
+            case 5 -> thread = new Thread(new LayangLayang.LayangLayangRunnable());
+            case 6 -> thread = new Thread(new Trapesium.TrapesiumRunnable());
+            case 7 -> thread = new Thread(new BelahKetupat.BelahKetupatRunnable());
+            case 8 -> thread = new Thread(new Lingkaran.LingkaranRunnable());
+            case 9 -> thread = new Thread(new Bola.BolaRunnable());
+            case 10 -> thread = new Thread(new Kerucut.KerucutRunnable());
+            case 11 -> thread = new Thread(new KerucutTerpancung.KerucutTerpancungRunnable());
+            case 12 -> thread = new Thread(new PrismaSegiTiga.PrismaSegiTigaRunnable());
+            case 13 -> thread = new Thread(new LimasSegitiga.LimasSegitigaRunnable());
+            case 14 -> thread = new Thread(new PrismaSegiEmpat.PrismaSegiEmpatRunnable());
+            case 15 -> thread = new Thread(new LimasPersegiPanjang.LimasPersegiPanjangRunnable());
+            case 16 -> thread = new Thread(new Kubus.KubusRunnable());
+            case 17 -> thread = new Thread(new LimasJajarGenjang.LimasJajarGenjangRunnable());
+            case 18 -> thread = new Thread(new PrismaJajarGenjang.PrismaJajarGenjangRunnable());
+            case 19 -> thread = new Thread(new LimasLayangLayang.LimasLayangLayangRunnable());
+            case 20 -> thread = new Thread(new PrismaLayangLayang.PrismaLayangLayangRunnable());
+            case 21 -> thread = new Thread(new LimasTrapesium.LimasTrapesiumRunnable());
+            case 22 -> thread = new Thread(new PrismaTrapesium.PrismaTrapesiumRunnable());
+            case 23 -> thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
+            case 24 -> thread = new Thread(new PrismaBelahKetupat.PrismaBelahKetupatRunnable());
+            case 25 -> thread = new Thread(new JuringLingkaran.JuringLingkaranRunnable());
+            case 26 -> thread = new Thread(new TemberengLingkaran.TemberengLingkaranRunnable());
+            case 27 -> thread = new Thread(new JuringBola.JuringBolaRunnable());
+            case 28 -> thread = new Thread(new TemberengBola.TemberengBolaRunnable());
+            case 29 -> thread = new Thread(new CincinBola.CincinBolaRunnable());
+            case 30 -> thread = new Thread(new Tabung.TabungRunnable());
+            case 31 -> thread = new Thread(new LimasPersegiPanjang.LimasPersegiPanjangRunnable()); // tambahan dari sebelumnya
+
+                case 0 -> {
                     jalan = false;
                     System.out.println("Terima kasih! Program selesai.");
                     continue; // lanjut ke iterasi berikutnya, agar tidak jalan `thread.start()`
-                default:
+                }
+                default -> {
                     System.out.println("Pilihan tidak valid.");
                     continue;
+                }
             }
 
             thread.start();
