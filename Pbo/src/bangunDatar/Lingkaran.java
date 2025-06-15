@@ -23,6 +23,12 @@
             return keliling;
         }
 
-        
+        public double getJari() {
+        return jari;
+}
+
+    public double getLuas() {
+    return luas;
+}
 
     }
