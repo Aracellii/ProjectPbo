@@ -43,8 +43,8 @@ public class KerucutTerpancung extends Kerucut {
 
             kerucutTerpancung = new KerucutTerpancung(jari, tinggi, tinggiTerpancung);
 
-            System.out.println("Volume kerucut: " + kerucutTerpancung.hitungVolume());
-            System.out.println("Luas permukaan kerucut: " + kerucutTerpancung.hitungLuasPermukaan());
+            System.out.println("Volume kerucut terpancung: " + kerucutTerpancung.hitungVolume());
+            System.out.println("Luas permukaan kerucut terpancung: " + kerucutTerpancung.hitungLuasPermukaan());
         }
 
         public KerucutTerpancung getKerucutTerpancung() {

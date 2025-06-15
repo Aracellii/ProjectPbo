@@ -30,8 +30,8 @@ public class Kubus extends Persegi  {
 
             kubus = new Kubus(sisi);
 
-            System.out.println("Luas persegi: " + kubus.hitungVolume());
-            System.out.println("Keliling persegi: " + kubus.hitungLuasPermukaan());
+            System.out.println("Volume kubus: " + kubus.hitungVolume());
+            System.out.println("Luas permukaan kubus: " + kubus.hitungLuasPermukaan());
         }
 
         public Kubus getKubus() {

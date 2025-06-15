@@ -54,8 +54,8 @@ public class LayangLayang extends BangunDatar {
 
             layangLayang = new LayangLayang(diagonalA, diagonalB, sisiPendek, sisiPanjang);
 
-            layangLayang.hitungLuas();
-            layangLayang.hitungKeliling();
+            System.out.println("Keliling layang-layang: " + layangLayang.hitungKeliling());
+            System.out.println("Luas layang-layang: " + layangLayang.hitungLuas());
         }
 
         public LayangLayang getLayangLayang() {

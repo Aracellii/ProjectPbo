@@ -49,8 +49,8 @@ public class JajarGenjang extends BangunDatar {
 
             jajarGenjang = new JajarGenjang(alas, sisiMiring, tinggi);
 
-            jajarGenjang.hitungLuas();
-            jajarGenjang.hitungKeliling();
+            System.out.println("Keliling jajar genjang: " + jajarGenjang.hitungKeliling());
+            System.out.println("Luas jajar genjang: " + jajarGenjang.hitungLuas());
         }
 
         public JajarGenjang getJajarGenjang() {
