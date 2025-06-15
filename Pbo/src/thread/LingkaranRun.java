@@ -4,7 +4,7 @@ package thread;
 import bangunDatar.Lingkaran;
 import java.util.Scanner;
 
-public class LingkaranRun implements Runnable {
+public class LingkaranRun extends Thread {
     private Scanner input;
     private double jariLingkaran = 0;
     private Lingkaran lingkaran; // simpan objek Lingkaran di sini
@@ -17,7 +17,7 @@ public class LingkaranRun implements Runnable {
     public void run() {
         // Input jari-jari dengan validasi
         while (true) {
-            System.out.print("Masukkan jari-jari lingkaran (angka > 0): ");
+            System.out.print("Masukkan jari-jari lingkaran: ");
             String line = input.nextLine();
 
             try {

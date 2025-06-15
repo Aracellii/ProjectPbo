@@ -3,7 +3,7 @@ package thread;
 import bangunDatar.Bola;
 import java.util.Scanner;
 
-public class BolaRun implements Runnable {
+public class BolaRun extends Thread {
     private final Scanner input;
     private final double jariLingkaran;
 
@@ -25,7 +25,7 @@ public class BolaRun implements Runnable {
                 jariBola = this.jariLingkaran;
                 break;
             } else if (pilihan.equals("tidak")) {
-                // Input jari-jari baru dengan validasi angka > 0
+                // Input jari-jari baru 
                 while (true) {
                     System.out.print("Masukkan jari-jari baru untuk bola : ");
                     String line = input.nextLine();
@@ -42,7 +42,7 @@ public class BolaRun implements Runnable {
                         System.out.println("Input tidak valid, masukkan angka.");
                     }
                 }
-                break; // keluar loop outer setelah dapat jariBola valid
+                break; // keluar loop setelah dapat jariBola 
             } else {
                 System.out.println("Input salah. Hanya menerima 'ya' atau 'tidak'.");
             }
