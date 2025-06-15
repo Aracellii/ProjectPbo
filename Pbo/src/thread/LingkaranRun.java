@@ -1,4 +1,6 @@
+
 package thread;
+
 import bangunDatar.Lingkaran;
 import java.util.Scanner;
 
@@ -13,16 +15,41 @@ public class LingkaranRun implements Runnable {
 
     @Override
     public void run() {
-        System.out.print("Masukkan jari-jari lingkaran: ");
-        jariLingkaran = input.nextDouble();
-        input.nextLine();
+        // Input jari-jari dengan validasi
+        while (true) {
+            System.out.print("Masukkan jari-jari lingkaran (angka > 0): ");
+            String line = input.nextLine();
 
-        System.out.print("Hitung apa? (luas/keliling/keduanya): ");
-        String tugas = input.nextLine().toLowerCase();
+            try {
+                double nilai = Double.parseDouble(line);
+                if (nilai > 0) {
+                    jariLingkaran = nilai;
+                    break; // keluar loop jika valid
+                } else {
+                    System.out.println("Jari-jari harus lebih dari 0.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Input tidak valid, masukkan angka.");
+            }
+        }
 
-        // Objek disimpan ke field, bukan hanya lokal
+        // Input tugas dengan validasi
+        String tugas;
+        while (true) {
+            System.out.print("Hitung apa? (luas/keliling/keduanya): ");
+            tugas = input.nextLine().toLowerCase();
+
+            if (tugas.equals("luas") || tugas.equals("keliling") || tugas.equals("keduanya")) {
+                break; // valid
+            } else {
+                System.out.println("Input tidak valid. Gunakan: luas, keliling, atau keduanya.");
+            }
+        }
+
+        // Buat objek lingkaran
         lingkaran = new Lingkaran(jariLingkaran);
 
+        // Hitung dan tampilkan hasil sesuai tugas
         switch (tugas) {
             case "luas":
                 System.out.println("Luas lingkaran: " + lingkaran.hitungLuas());
@@ -34,12 +61,9 @@ public class LingkaranRun implements Runnable {
                 System.out.println("Luas lingkaran: " + lingkaran.hitungLuas());
                 System.out.println("Keliling lingkaran: " + lingkaran.hitungKeliling());
                 break;
-            default:
-                System.out.println("Tugas tidak dikenali.");
         }
     }
 
-    // Getter agar bisa akses objek Lingkaran dari luar
     public Lingkaran getLingkaran() {
         return lingkaran;
     }
