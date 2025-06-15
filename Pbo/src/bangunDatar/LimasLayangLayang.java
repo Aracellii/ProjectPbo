@@ -4,6 +4,8 @@ public class LimasLayangLayang extends LayangLayang {
     private double tinggiLimas;
     private double volume;
     private double luasPermukaan;
+    private double sisiTegakPendek;
+    private double sisiTegakPanjang;
 
     public LimasLayangLayang(double diagonalA, double diagonalB, double sisiPendek, double sisiPanjang, double tinggiLimas) {
         super(diagonalA, diagonalB, sisiPendek, sisiPanjang);
@@ -16,13 +18,9 @@ public class LimasLayangLayang extends LayangLayang {
     }
 
     public double hitungLuasPermukaan() {
-        double sisiTegakPendek = Math.sqrt((tinggiLimas * tinggiLimas)  + (super.sisiPendek/2.0) * (super.sisiPendek/2.0));
-        double sisiTegakPanjang = Math.sqrt((tinggiLimas * tinggiLimas) + (super.sisiPanjang/2.0) * (super.sisiPendek/2.0));
-
-        double luasSisiPendek = 2 * (0.5 * super.sisiPendek * sisiTegakPendek);
-        double luasSisiPanjang = 2 * (0.5 * super.sisiPanjang * sisiTegakPanjang);
-
-        luasPermukaan = super.luas + luasSisiPendek + luasSisiPanjang;
+        sisiTegakPendek = Math.sqrt((tinggiLimas * tinggiLimas)  + (super.sisiPendek/2.0) * (super.sisiPendek/2.0));
+        sisiTegakPanjang = Math.sqrt((tinggiLimas * tinggiLimas) + (super.sisiPanjang/2.0) * (super.sisiPanjang/2.0));
+        luasPermukaan = super.luas + 2 * (0.5 * super.sisiPendek * sisiTegakPendek) + 2 * (0.5 * super.sisiPanjang * sisiTegakPanjang);
         return luasPermukaan;
-    }
+    }
 }
