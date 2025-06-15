@@ -1,5 +1,7 @@
 package bangunDatar;
 
+import java.util.Scanner;
+
 public class JajarGenjang extends BangunDatar {
     protected double alas;
     protected double sisiMiring;
@@ -28,8 +30,31 @@ public class JajarGenjang extends BangunDatar {
         System.out.println("Keliling Jajar Genjang: " + keliling);
         return keliling;
     }
-    public void prosesInputDanValidasi() 
-    {
-        
+
+    public static class JajarGenjangRunnable implements Runnable {
+        private JajarGenjang jajarGenjang;
+
+        @Override
+        public void run() {
+            Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Masukkan alas jajar genjang: ");
+            double alas = scanner.nextDouble();
+
+            System.out.print("Masukkan sisi miring jajar genjang: ");
+            double sisiMiring = scanner.nextDouble();
+
+            System.out.print("Masukkan tinggi jajar genjang: ");
+            double tinggi = scanner.nextDouble();
+
+            jajarGenjang = new JajarGenjang(alas, sisiMiring, tinggi);
+
+            jajarGenjang.hitungLuas();
+            jajarGenjang.hitungKeliling();
+        }
+
+        public JajarGenjang getJajarGenjang() {
+            return jajarGenjang;
+        }
     }
 }
