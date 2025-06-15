@@ -20,6 +20,7 @@ public class Main {
             System.out.println("8. Belah Ketupat");
             System.out.println("9. Bola");
             System.out.println("10. Kerucut");
+            System.out.println("11. Limas Belah Ketupat");
 
 
 
@@ -59,6 +60,9 @@ public class Main {
                     break;
                  case 10:
                     thread = new Thread(new Kerucut.KerucutRunnable());
+                    break;
+                 case 11:
+                    thread = new Thread(new LimasBelahKetupat.LimasBelahKetupatRunnable());
                     break;
                 case 0:
                     jalan = false;
