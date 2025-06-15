@@ -16,7 +16,7 @@ public class PrismaBelahKetupat extends BelahKetupat {
     }
     
     public double hitungLuasPermukaan() {
-        luasPermukaan = 2 * super.luas + 4 * (super.sisi * tinggiPrisma);
+        luasPermukaan = 2 * super.luas + super.keliling * tinggiPrisma;
         return luasPermukaan;
     }
 }

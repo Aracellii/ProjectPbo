@@ -1,13 +1,26 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package bangunDatar;
 
-/**
- *
- * @author L E N O V O
- */
-public class LimasPersegiPanjang {
+public class LimasPersegiPanjang extends PersegiPanjang {
+    private double tinggiLimas;
+    private double volume;
+    private double luasPermukaan;
+    private double sisiTegakPanjang;
+    private double sisiTegakLebar;
     
+    public LimasPersegiPanjang(double panjang, double lebar, double tinggiLimas) {
+        super(panjang, lebar);
+        this.tinggiLimas = tinggiLimas;
+    }
+    
+    public double hitungVolume() {
+        volume = 1.0/3.0 * super.luas * tinggiLimas;
+        return volume;
+    }
+    
+    public double hitungLuasPermukaan() {
+        sisiTegakPanjang = Math.sqrt(tinggiLimas * tinggiLimas + (super.panjang/2.0) * (super.panjang/2.0));
+        sisiTegakLebar = Math.sqrt(tinggiLimas * tinggiLimas + (super.lebar/2.0) * (super.lebar/2.0));
+        luasPermukaan = super.luas + (super.panjang * sisiTegakPanjang) + (super.lebar * sisiTegakLebar);
+        return luasPermukaan;
+    }
 }
