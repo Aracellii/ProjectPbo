@@ -2,16 +2,13 @@ package bangunDatar;
 
 public class LimasSegitiga extends Segitiga {
     private final double tinggiLimas;
-    private final double tinggiSisiTegakA, tinggiSisiTegakB, tinggiSisiTegakC;
+    private double tinggiSisiTegakA, tinggiSisiTegakB, tinggiSisiTegakC;
     private double volume;
     private double luasPermukaan;
 
-    public LimasSegitiga(double alas, double tinggi, double sisiA, double sisiB, double tinggiLimas, double tinggiSisiTegakA, double tinggiSisiTegakB, double tinggiSisiTegakC) {
+    public LimasSegitiga(double alas, double tinggi, double sisiA, double sisiB, double tinggiLimas) {
         super(alas, tinggi, sisiA, sisiB);
         this.tinggiLimas = tinggiLimas;
-        this.tinggiSisiTegakA = tinggiSisiTegakA;
-        this.tinggiSisiTegakB = tinggiSisiTegakB;
-        this.tinggiSisiTegakC = tinggiSisiTegakC;
     }
 
     public double hitungVolume() {
@@ -20,6 +17,9 @@ public class LimasSegitiga extends Segitiga {
     }
 
     public double hitungLuasPermukaan() {
+        tinggiSisiTegakA = Math.sqrt(tinggiLimas * tinggiLimas + (super.sisiA/2.0) * (super.sisiA/2.0));
+        tinggiSisiTegakB = Math.sqrt(tinggiLimas * tinggiLimas + (super.sisiB/2.0) * (super.sisiB/2.0));
+        tinggiSisiTegakC = Math.sqrt(tinggiLimas * tinggiLimas + (super.alas/2.0) * (super.alas/2.0));  
         double luasSisiA = 0.5 * super.sisiA * tinggiSisiTegakA;
         double luasSisiB = 0.5 * super.sisiB * tinggiSisiTegakB;
         double luasSisiAlas = 0.5 * super.alas  * tinggiSisiTegakC;

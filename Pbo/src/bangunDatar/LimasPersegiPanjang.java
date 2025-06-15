@@ -4,8 +4,7 @@ public class LimasPersegiPanjang extends PersegiPanjang {
     private double tinggiLimas;
     private double volume;
     private double luasPermukaan;
-    private double sisiTegakPanjang;
-    private double sisiTegakLebar;
+    private double sisiTegakPanjang, sisiTegakLebar;
     
     public LimasPersegiPanjang(double panjang, double lebar, double tinggiLimas) {
         super(panjang, lebar);

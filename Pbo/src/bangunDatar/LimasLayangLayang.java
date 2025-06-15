@@ -4,8 +4,7 @@ public class LimasLayangLayang extends LayangLayang {
     private double tinggiLimas;
     private double volume;
     private double luasPermukaan;
-    private double sisiTegakPendek;
-    private double sisiTegakPanjang;
+    private double sisiTegakPendek, sisiTegakPanjang;
 
     public LimasLayangLayang(double diagonalA, double diagonalB, double sisiPendek, double sisiPanjang, double tinggiLimas) {
         super(diagonalA, diagonalB, sisiPendek, sisiPanjang);

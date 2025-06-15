@@ -3,7 +3,6 @@ package bangunDatar;
 
 public class LimasSegiempat extends Persegi {
     private double tinggiLimas;
-    private double sisi;
     private double volume;
     private double luasPermukaan;
     private double luasSisiTegak;
