@@ -21,7 +21,7 @@ public class Segitiga extends BangunDatar implements bangun.Bangun {
 
     @Override
     public double hitungLuas() {
-        luas = alas * tinggi / 2;
+        luas = alas * tinggi / 2.0;
         return luas;
     }
 

@@ -21,7 +21,7 @@ public class Balok extends PersegiPanjang {
         double p = super.panjang;
         double l = super.lebar;
         double t = tinggi;
-        luasPermukaan = 2 * (p * l + p * t + l * t);
+        luasPermukaan = 2.0 * (p * l + p * t + l * t);
         return luasPermukaan;
     }
 
@@ -31,7 +31,7 @@ public class Balok extends PersegiPanjang {
     }
 
     public double hitungLuasPermukaan(double panjangBaru, double lebarBaru, double tinggiBaru) {
-        luasPermukaan = 2 * ((panjangBaru * lebarBaru) + (panjangBaru * tinggiBaru) + (lebarBaru * tinggiBaru));
+        luasPermukaan = 2.0 * ((panjangBaru * lebarBaru) + (panjangBaru * tinggiBaru) + (lebarBaru * tinggiBaru));
         return luasPermukaan;
     }
     

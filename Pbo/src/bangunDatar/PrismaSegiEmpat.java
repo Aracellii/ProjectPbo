@@ -18,7 +18,7 @@ public class PrismaSegiEmpat extends PersegiPanjang {
     }
 
     public double hitungLuasPermukaan() {
-        luasPermukaan = 2 * super.luas + super.keliling * tinggi;
+        luasPermukaan = 2.0 * super.luas + super.keliling * tinggi;
         return luasPermukaan;
     }
     

@@ -19,13 +19,13 @@ public class BelahKetupat extends BangunDatar {
 
     @Override
     public double hitungLuas() {
-        luas = (diagonalA * diagonalB) / 2;
+        luas = (diagonalA * diagonalB) / 2.0;
         return luas;
     }
 
     @Override
     public double hitungKeliling() {
-        keliling = sisi * 4;
+        keliling = sisi * 4.0;
         return keliling;
     }
 

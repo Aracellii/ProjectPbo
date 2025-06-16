@@ -18,7 +18,7 @@ public class PrismaTrapesium extends Trapesium {
     }
 
     public double hitungLuasPermukaan() {
-        luasPermukaan = 2 * super.luas + super.keliling * tinggiPrisma;
+        luasPermukaan = 2.0 * super.luas + super.keliling * tinggiPrisma;
         return luasPermukaan;
     }
     

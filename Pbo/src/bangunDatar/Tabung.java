@@ -18,7 +18,7 @@ public class Tabung extends Lingkaran {
     }
 
     public double hitungLuasPermukaan() {
-        luas = 2 * super.luas + super.keliling * tinggi;
+        luas = 2.0 * super.luas + super.keliling * tinggi;
         return luasPermukaan;
     }
     
@@ -30,7 +30,7 @@ public class Tabung extends Lingkaran {
 
     // Method overloading untuk luas permukaan jika diberi ukuran baru
     public double hitungLuasPermukaan(double jariBaru, double tinggiBaru) {
-        luasPermukaan = 2 * Math.PI * jariBaru * jariBaru + 2 * Math.PI * jariBaru * tinggiBaru;
+        luasPermukaan = 2.0 * Math.PI * jariBaru * jariBaru + 2.0 * Math.PI * jariBaru * tinggiBaru;
         return luasPermukaan;
     }
 

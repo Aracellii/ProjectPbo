@@ -15,7 +15,7 @@ public class Kubus extends Persegi  {
         return volume;
     }
     public double hitungLuasPermukaan() {
-        luasPermukaan = 6 * super.luas;
+        luasPermukaan = 6.0 * super.luas;
         return luasPermukaan;
     }
     

@@ -28,7 +28,7 @@ public class Bola extends Lingkaran {
     }
 
     public double hitungLuasPermukaan(double jariBaru) {
-        luasPermukaan = 4 * Math.PI * Math.pow(jariBaru, 2);
+        luasPermukaan = 4.0 * Math.PI * Math.pow(jariBaru, 2);
         return luasPermukaan;
     }
 

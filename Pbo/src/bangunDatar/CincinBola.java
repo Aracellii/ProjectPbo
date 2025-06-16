@@ -15,12 +15,12 @@ public class CincinBola extends Lingkaran {
     }
 
     public double hitungLuasPermukaan() {
-        luasPermukaan = 2 * Math.PI * jari * tinggi;
+        luasPermukaan = 2.0 * Math.PI * jari * tinggi;
         return luasPermukaan;
     }
 
     public double hitungVolume() {
-        volume = (Math.PI * Math.pow(tinggi, 2) * (3 * jari - tinggi)) / 3;
+        volume = (Math.PI * Math.pow(tinggi, 2) * (3.0 * jari - tinggi)) / 3.0;
         return volume;
     }
 

@@ -21,7 +21,7 @@ public class Trapesium extends BangunDatar {
 
     @Override
     public double hitungLuas() {
-        luas = (sisiAtas + sisiBawah) * tinggi / 2;
+        luas = (sisiAtas + sisiBawah) * tinggi / 2.0;
         return luas;
     }
 

@@ -21,14 +21,14 @@ public class LayangLayang extends BangunDatar {
 
     @Override
     public double hitungLuas() {
-        luas = diagonalA * diagonalB / 2;
+        luas = diagonalA * diagonalB / 2.0;
         System.out.println("Luas Layang-Layang: " + luas);
         return luas;
     }
 
     @Override
     public double hitungKeliling() {
-        keliling = 2 * (sisiPanjang + sisiPendek);
+        keliling = 2.0 * (sisiPanjang + sisiPendek);
         System.out.println("Keliling Layang-Layang: " + keliling);
         return keliling;
     }

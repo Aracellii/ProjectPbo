@@ -15,13 +15,13 @@ public class JuringLingkaran extends Lingkaran {
       
     @Override
     public double hitungLuas() {
-        luasJuring = (sudut / 360) * super.luas;
+        luasJuring = (sudut / 360.0) * super.luas;
         return luasJuring;
     }
 
     @Override
     public double hitungKeliling() {
-        kelilingJuring = (sudut / 360) * super.luas + 2 * super.jari;
+        kelilingJuring = (sudut / 360.0) * super.luas + 2 * super.jari;
         return kelilingJuring;
     }
 
@@ -31,7 +31,7 @@ public class JuringLingkaran extends Lingkaran {
     }
 
     public double hitungKeliling(double jariJariBaru, double sudutJuringBaru) {
-        kelilingJuring = (sudutJuringBaru / 360.0) * (2 * Math.PI * jariJariBaru) + 2 * jariJariBaru;
+        kelilingJuring = (sudutJuringBaru / 360.0) * (2.0 * Math.PI * jariJariBaru) + 2.0 * jariJariBaru;
         return kelilingJuring;
     }
     

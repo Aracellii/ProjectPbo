@@ -29,7 +29,7 @@ public class TemberengLingkaran extends Lingkaran {
     public double hitungKeliling() {
         double sudutRadian = Math.toRadians(sudut);
         double panjangBusur = sudutRadian * super.jari;
-        double taliBusur = 2 * super.jari * Math.sin(sudutRadian / 2);
+        double taliBusur = 2.0 * super.jari * Math.sin(sudutRadian / 2.0);
         kelilingTembereng = panjangBusur + taliBusur;
         return kelilingTembereng;
     }
@@ -45,7 +45,7 @@ public class TemberengLingkaran extends Lingkaran {
     public double hitungKeliling(double jariJariBaru, double sudutBaru) {
         double sudutRadian = Math.toRadians(sudutBaru);
         double panjangBusur = sudutRadian * jariJariBaru;
-        double taliBusur = 2 * jariJariBaru * Math.sin(sudutRadian / 2);
+        double taliBusur = 2.0 * jariJariBaru * Math.sin(sudutRadian / 2.0);
         kelilingTembereng= panjangBusur + taliBusur;
         return kelilingTembereng;
     }

@@ -21,7 +21,7 @@ public class PrismaSegiTiga extends Segitiga {
 
     public double hitungLuasPermukaan() {
         // Luas permukaan = 2 * luas alas + keliling alas * tinggi prisma
-        luasPermukaan = 2 * super.luas + super.keliling * tinggiPrisma;
+        luasPermukaan = 2.0 * super.luas + super.keliling * tinggiPrisma;
         return luasPermukaan;
     }
 

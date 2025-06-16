@@ -20,7 +20,7 @@ public class Persegi extends BangunDatar implements Bangun {
 
     @Override
     public double hitungKeliling() {
-        keliling = 4 * sisi;
+        keliling = 4.0 * sisi;
         return keliling;
     }
     

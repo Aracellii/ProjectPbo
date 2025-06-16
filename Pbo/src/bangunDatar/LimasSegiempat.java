@@ -20,7 +20,7 @@ public class LimasSegiempat extends Persegi {
     }
 
     public double hitungLuasPermukaan() {
-        luasSisiTegak = 4 * (0.5 * super.sisi * tinggiLimas);
+        luasSisiTegak = 4.0 * (0.5 * super.sisi * tinggiLimas);
         luasPermukaan = super.luas + luasSisiTegak;
         return luasPermukaan;
     }
@@ -33,7 +33,7 @@ public class LimasSegiempat extends Persegi {
 
     // Method overloading untuk luas permukaan jika diberi ukuran baru
     public double hitungLuasPermukaan(double sisiBaru, double tinggiLimasBaru) {
-        luasSisiTegak = 4 * (0.5 * sisiBaru * tinggiLimasBaru);
+        luasSisiTegak = 4.0 * (0.5 * sisiBaru * tinggiLimasBaru);
         luasPermukaan = (sisiBaru * sisiBaru) + luasSisiTegak;
         return luasPermukaan;
     }

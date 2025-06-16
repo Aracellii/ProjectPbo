@@ -23,16 +23,16 @@ public class LimasJajarGenjang extends JajarGenjang {
     }
     
     public double hitungVolume(){ //jika tidak ganti
-        volume = 1/3 * super.luas * tinggiLimas;
+        volume = 1.0/3.0 * super.luas * tinggiLimas;
         return volume;
     }
     
     public double hitungLuasPermukaan(){ //jika tidak ganti
-        double sisiTegakPanjang = Math.sqrt(Math.pow(tinggiLimas,2) + Math.pow((tinggi/2),2));
-        double sisiTegakMiring = Math.sqrt(Math.pow(tinggiLimas,2) + Math.pow((alas/2),2));
+        double sisiTegakPanjang = Math.sqrt(Math.pow(tinggiLimas,2) + Math.pow((tinggi/2.0),2));
+        double sisiTegakMiring = Math.sqrt(Math.pow(tinggiLimas,2) + Math.pow((alas/2.0),2));
         
-        double luasSegitigaPanjang = (alas/2) * sisiTegakPanjang;
-        double luasSegitigaMiring = (sisiMiring/2) * sisiTegakMiring;
+        double luasSegitigaPanjang = (alas/2.0) * sisiTegakPanjang;
+        double luasSegitigaMiring = (sisiMiring/2.0) * sisiTegakMiring;
         double luasAlasLimas = super.luas;
         
         luasPermukaan = luasAlasLimas + luasSegitigaPanjang + luasSegitigaMiring;
@@ -45,11 +45,11 @@ public class LimasJajarGenjang extends JajarGenjang {
     }
     
     public double hitungLuasPermukaan(double alasBaru, double tinggiBaru, double sisiMiringBaru, double tinggiLimasBaru){ //jika ganti
-        double sisiTegakPanjang = Math.sqrt(Math.pow(tinggiLimasBaru,2) + Math.pow((tinggiBaru/2),2));
-        double sisiTegakMiring = Math.sqrt(Math.pow(tinggiLimasBaru,2) + Math.pow((alasBaru/2),2));
+        double sisiTegakPanjang = Math.sqrt(Math.pow(tinggiLimasBaru,2) + Math.pow((tinggiBaru/2.0),2));
+        double sisiTegakMiring = Math.sqrt(Math.pow(tinggiLimasBaru,2) + Math.pow((alasBaru/2.0),2));
         
-        double luasSegitigaPanjang = (alasBaru/2) * sisiTegakPanjang;
-        double luasSegitigaMiring = (sisiMiringBaru/2) * sisiTegakMiring;
+        double luasSegitigaPanjang = (alasBaru/2.0) * sisiTegakPanjang;
+        double luasSegitigaMiring = (sisiMiringBaru/2.0) * sisiTegakMiring;
         double luasAlasLimas = alasBaru * tinggiBaru;
         
         luasPermukaan = luasAlasLimas + luasSegitigaPanjang + luasSegitigaMiring;

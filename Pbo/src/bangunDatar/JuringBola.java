@@ -32,7 +32,7 @@ public class JuringBola extends Bola {
 
     @Override
     public double hitungLuasPermukaan(double jariBaru) {
-        double luasPermukaanBola = 4 * Math.PI * Math.pow(jariBaru, 2);
+        double luasPermukaanBola = 4.0 * Math.PI * Math.pow(jariBaru, 2);
         double luasLingkaranPenutup = Math.PI * Math.pow(jariBaru, 2);
         luasPermukaanJuring = (sudut / 360.0) * luasPermukaanBola + luasLingkaranPenutup;
         return luasPermukaanJuring;

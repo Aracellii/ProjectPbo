@@ -26,7 +26,7 @@ public class JajarGenjang extends BangunDatar {
 
     @Override   
     public double hitungKeliling() {
-        this.keliling = (alas + sisiMiring) * 2;
+        this.keliling = (alas + sisiMiring) * 2.0;
         System.out.println("Keliling Jajar Genjang: " + keliling);
         return keliling;
     }

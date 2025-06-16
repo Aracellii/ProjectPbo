@@ -35,7 +35,7 @@ public class LimasLayangLayang extends LayangLayang {
 
         double sisiTegakPanjang = Math.sqrt((tinggiLimasBaru * tinggiLimasBaru) + (sisiPanjangBaru/2.0) * (sisiPanjangBaru/2.0));
 
-        luasPermukaan = (0.5 * diagonalABaru * diagonalBBaru) + 2 * (0.5 * sisiPendekBaru * sisiTegakPendek) + 2 * (0.5 * sisiPanjangBaru * sisiTegakPanjang);
+        luasPermukaan = (0.5 * diagonalABaru * diagonalBBaru) + 2.0 * (0.5 * sisiPendekBaru * sisiTegakPendek) + 2.0 * (0.5 * sisiPanjangBaru * sisiTegakPanjang);
         return luasPermukaan;
     }
 

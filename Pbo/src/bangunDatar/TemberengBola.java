@@ -16,24 +16,24 @@ public class TemberengBola extends Lingkaran {
     }
     
     public double hitungVolume() {
-        volume = (Math.PI * tinggi * tinggi * (3 * jari - tinggi)) / 3;
+        volume = (Math.PI * tinggi * tinggi * (3.0 * jari - tinggi)) / 3.0;
         return volume;
     }
 
     public double hitungLuasPermukaan() {
-        luasPermukaan = 2 * Math.PI * jari * tinggi;
+        luasPermukaan = 2.0 * Math.PI * jari * tinggi;
         return luasPermukaan;
     }
     
         // Method overloading untuk volume jika diberi ukuran baru
     public double hitungVolume(double jariBaru, double tinggiBaru) {
-        volume = (Math.PI * tinggiBaru * tinggiBaru * (3 * jariBaru - tinggiBaru)) / 3;
+        volume = (Math.PI * tinggiBaru * tinggiBaru * (3.0 * jariBaru - tinggiBaru)) / 3.0;
         return volume;
     }
 
     // Method overloading untuk luas permukaan jika diberi ukuran baru
     public double hitungLuasPermukaan(double jariBaru, double tinggiBaru) {
-        luasPermukaan = 2 * Math.PI * jariBaru * tinggiBaru;
+        luasPermukaan = 2.0 * Math.PI * jariBaru * tinggiBaru;
         return luasPermukaan;
     }
 

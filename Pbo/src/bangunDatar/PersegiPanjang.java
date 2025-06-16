@@ -23,7 +23,7 @@ public class PersegiPanjang extends BangunDatar {
 
     @Override
     public double hitungKeliling() {
-        keliling = 2 * (panjang + lebar);
+        keliling = 2.0 * (panjang + lebar);
         return keliling;
     }
 
